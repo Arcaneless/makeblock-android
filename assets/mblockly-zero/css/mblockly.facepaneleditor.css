@@ -1,0 +1,90 @@
+#facepanel-editor{
+    background: white;
+    border-radius: 6px;
+    width: 700px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 9px rgba(0,0,0,.4);
+}
+
+.facepanel-draw {
+  float: left;
+  border: 3px solid #e2e2e2;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.facepanel-ops {
+  right: 20px;
+  top: 11px;
+  position: absolute;
+  width: 90px;
+  background: #fafafa;
+  padding: 10px;
+}
+
+.fbtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 52px;
+  background: #7fd9ff;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 52%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.fbtn.active {
+  background-color: #0599d9;
+}
+
+#f-edit {
+  background-image: url(../images/pop-widgets/face-edit.png);
+  margin-top: 5px;
+}
+#f-erase {
+  background-image: url(../images/pop-widgets/face-eraser.png);
+}
+#f-clear {
+  background-image: url(../images/pop-widgets/face-trash.png);
+}
+#f-ok {
+  background-image: url(../images/pop-widgets/face-checkmark.png);
+  background-color: #32c4b7;
+  width: 70px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-size: 40%;
+}
+
+
+@media screen and (max-device-width:766px)  {
+    #facepanel-editor {
+      width: 530px;
+      padding: 15px;
+    }
+
+    .fbtn {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+    }
+
+    #f-edit {
+      margin-top: 10px;
+    }
+
+    #f-ok {
+      width: 50px;
+      margin-top: 20px;
+    }
+
+    .facepanel-ops {
+      right: 15px;
+      top: 6px;
+      width: 60px;
+      padding: 5px;
+    }
+}

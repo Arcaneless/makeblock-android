@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta charset="UTF-8">
+  <title>bridge</title>
+
+  <style type='text/css'>
+    html { font-family:Helvetica; color:#222; height: 100%;}
+    body {
+      height: 100%;
+    }
+    h1 { color:steelblue; font-size:24px; margin-top:24px; }
+    button { margin:0 3px 10px; font-size:12px; }
+    .logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+  </style>
+
+  <script src="../../vendors/jquery-2.1.3.min.js"></script>
+  <script src="../../js/common/base.js"></script>
+  <script src="../../js/makeblockhd/bridge.js"></script>
+  <script src="../../js/makeblockhd/hostInterface.js"></script>
+
+  <script src="../../js/airblock/neurons_logic_engine.js"></script>
+  <script src="../../js/makeblockNeuron/neuron.js"></script>
+  <script src="../../js/airblock/action_airblock.js"></script>
+
+</head>
+<body>
+<script src="./helper.js"></script>
+
+<button onclick="doJsCallNative()">Js Call Native</button>
+
+
+<script>
+  function doJsCallNative() {
+    jsCallNative("sendValueToNative", "100");
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "play": [
+    {
+      "action": "play_controlpannel",
+      "title": "cp_starter_robot_kit",
+      "cover": "cover-program-Starter - Robot Kit.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_robotic_arm_tank",
+      "cover": "cover-program-Ultimate - Robotic Arm Tank.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_ball_launcher",
+      "cover": "cover-program-Ultimate - Ball Launcher.png"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>mBot Ranger - Racing Car</string>
+	<string>mBot Ranger - Nervous Bird</string>
+	<string>mBot Ranger - Laser Blade</string>
+	<string>Ultimate2.0 - Robotic Arm Tank</string>
+	<string>Ultimate2.0 - Camera Dolly</string>
+	<string>Ultimate2.0 - Robotic Bartender</string>
+	<string>Ultimate2.0 - Self-Balancing Robot</string>
+	<string>Ultimate2.0 - Detecting Robot</string>
+	<string>Ultimate2.0 - 3D Capture A</string>
+	<string>Ultimate2.0 - 3D Capture B</string>
+	<string>Ultimate2.0 - Rolling Tank</string>
+	<string>Ultimate2.0 - Robotic Ant</string>
+	<string>Ultimate2.0 - Catapult Ram</string>
+	<string>mBot - Dancing Cat</string>
+	<string>mBot - Look Around Cat</string>
+	<string>mBot - Cat Searchlight</string>
+	<string>mBot - Follow Spot Robot</string>
+	<string>mBot - Intelligent Table Lamp</string>
+	<string>mBot - Scorpion Robot</string>
+	<string>mBot - Hexapod Robot</string>
+	<string>Starter - Robot Kit</string>
+	<string>Ultimate - Robotic Arm Tank</string>
+	<string>Ultimate - Ball Launcher</string>
+	<string>Airblock - ColourGyro</string>
+</array>
+</plist>

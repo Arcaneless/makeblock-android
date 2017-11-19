@@ -1,0 +1,9 @@
+{
+  "imgName": "cp_mbot_hexapod",
+   "link": {
+    "cn": "http://we.makeblock.com/topic/80/%E6%89%A9%E5%B1%95%E7%8E%A9%E6%B3%95-%E5%85%AD%E8%B6%B3%E6%9C%BA%E5%99%A8%E4%BA%BA",
+    "en": "http://us.makeblock.com/topic/153/six-legged-robot-for-expand"
+  },
+  "formMsg": "expand_form_mbot_hexapod",
+  "playMsg": "expand_play_mbot_hexapod"
+}

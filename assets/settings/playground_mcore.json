@@ -1,0 +1,61 @@
+{
+  "play": [
+    {
+      "action": "playground_car_mbot",
+      "title": "cp_title_drive",
+      "cover": "cover-playground-mBot - Controller.png"
+    },
+    {
+      "action": "playground_path_mbot",
+      "title": "cp_title_draw_and_run",
+      "cover": "cover-playground-mBot - DrawAndRun.png"
+    },
+    {
+      "action": "playground_music_mbot",
+      "title": "cp_title_musician",
+      "cover": "cover-playground-mBot - Music.png"
+    },
+    {
+      "action": "playground_voice_mbot",
+      "title": "cp_title_voice_control",
+      "cover": "cover-playground-mBot - VoiceControl.png"
+    }
+  ],
+  "expand": [
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_dancing_cat",
+      "cover": "cover-program-mBot - Dancing Cat.png"
+    },
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_look_around_cat",
+      "cover": "cover-program-mBot - Look Around Cat.png"
+    },
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_cat_searchlight",
+      "cover": "cover-program-mBot - Cat Searchlight.png"
+    },
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_follow_spot",
+      "cover": "cover-program-mBot - Follow Spot Robot.png"
+    },
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_intelligent_lamp",
+      "cover": "cover-program-mBot - Intelligent Table Lamp.png"
+    },
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_scorpion",
+      "cover": "cover-program-mBot - Scorpion Robot.png"
+    },
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_hexapod",
+      "cover": "cover-program-mBot - Hexapod Robot.png"
+    }
+  ]
+}

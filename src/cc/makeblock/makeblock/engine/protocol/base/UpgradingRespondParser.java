@@ -1,0 +1,20 @@
+package cc.makeblock.makeblock.engine.protocol.base;
+
+public class UpgradingRespondParser
+  extends RespondParser
+{
+  public UpgradingRespondParser()
+  {
+    super(null, null);
+  }
+  
+  protected void packData(byte[] paramArrayOfByte) {}
+  
+  public void parseBytes(byte[] paramArrayOfByte) {}
+}
+
+
+/* Location:              C:\Users\Marcus Cheung\Desktop\AndriodHacking\Makeblock_v3.0.8_apkpure.com-dex2jar.jar!\cc\makeblock\makeblock\engine\protocol\base\UpgradingRespondParser.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       0.7.1
+ */

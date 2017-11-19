@@ -1,0 +1,148 @@
+2516: new Uint8Array(inbuf, offset, length);
+报错： RangeError: Length out of range of buffer
+
+原因：设置舵机的上报模式，当模式为0时，相当于一次查询指令。而一次查询则会收到固件的
+返回值。会返回pos,speed, temperature等。当得到pos的时候，拿到的数据报错了。
+
+收到的数据如下：0x 02 60 22 00 00
+type: short
+
+22 表示是 pos，底层返回的数据只有2位，但定义的时候是short类型为3位。所以解析报错。pos应该定义为 SHORT.
+
+
+
+SMART_SERVO:
+
+type: 0x60
+angle subid: 0x36
+datatype: long 型
+
+回复协议的格式
+
+
+
+-------------------- 智能舵机的参数列表 ----------------------
+
+var block = {
+  name: 'SMART_SERVO',
+  type: 0x60,
+  status: {
+    ANGLE: {
+      subid: 0x36,
+      datatype: ['long']
+    },
+    POS: {
+      subid: 0x22,
+      datatype: ['SHORT']
+    },
+    SPEED: {
+      subid: 0x23,
+      datatype: ['float']
+    },
+    TEMPERATURE: {
+      subid: 0x25,
+      datatype: ['float']
+    },
+    CURRENT: {
+      subid: 0x26,
+      datatype: ['float']
+    },
+    VOLTAGE: {
+      subid: 0x27,
+      datatype: ['float']
+    }
+  },
+  commands: {
+    GET_CUR_POS: {
+      commandid: 0x22,
+      datatype: ['BYTE']
+    },
+    GET_CUR_SPEED: {
+      commandid: 0x23,
+      datatype: ['BYTE']
+    },
+    GET_TEMPERATURE: {
+      commandid: 0x25,
+      datatype: ['BYTE']
+    },
+    GET_CURRENT: {
+      commandid: 0x26,
+      datatype: ['BYTE']
+    },
+    GET_VOLTAGE: {
+      commandid: 0x27,
+      datatype: ['BYTE']
+    },
+    SET_ABSOLUTE_POS: {
+      commandid: 0x11,
+      datatype: ['SHORT', 'SHORT']  // POS,SPEED
+    },
+    SET_RELATIVE_POS : {
+      commandid: 0x12,
+      datatype: ['SHORT', 'SHORT']  // POS,SPEED
+    },
+    SET_RGB_LED: {
+      commandid: 0x17,
+      datatype: ['SHORT','SHORT','SHORT']  //  R,G,B
+    },
+    SET_BREAK: {
+      commandid: 0x16,
+      datatype: ['BYTE']  // 1 : release; 0 : lock
+    },
+    SET_HAND_SHAKE: {
+      commandid: 0x18
+    },
+    SET_ANGLE_AS_ZERO: {
+      commandid: 0x30
+    },
+    SET_ABSOLUTE_SHORT_ANGLE: {
+      commandid: 0x31,
+      datatype: ['short', 'SHORT']  // ANGLE,SPEED
+    },
+    SET_RELATIVE_SHORT_ANGLE: {
+      commandid: 0x32,
+      datatype: ['short', 'SHORT']  // ANGLE,SPEED
+    },
+    SET_ABSOLUTE_LONG_ANGLE: {
+      commandid: 0x33,
+      datatype: ['long', 'SHORT']  // ANGLE,SPEED
+    },
+    SET_RELATIVE_LONG_ANGLE: {
+      commandid: 0x34,
+      datatype: ['long', 'SHORT']  // ANGLE,SPEED
+    },
+    SET_PWM: {
+      commandid: 0x35,  //move like DC MOTOER
+      datatype: ['short'] //PWM
+    },
+    GET_CUR_ANGLE: {
+      commandid: 0x36,
+      datatype: ['BYTE']
+    },
+    SET_BACKTO_INITIAL_POS: {
+      commandid: 0x37,
+      datatype: ['BYTE','SHORT'] //BACK MODE(0: RELATIVE POS, 1: ABSOLUTE POS), SPEED
+    }
+  }
+};
+
+module.exports = block;
+
+
+
+
+-------------------- 指令集 START ----------------------
+心跳包：
+0x ff 10 00
+
+设置上报模式：
+0x 01 60 22 00 :GET_CUR_POS  （0-4096模拟器值）
+0x 01 60 23 00 :GET_CUR_SPEED
+0x 01 60 25 00 :GET_TEMPERATURE
+0x 01 60 26 00 :GET_CURRENT
+0x 01 60 27 00 :GET_VOLTAGE
+0x 01 60 36 01 :GET_CUR_ANGLE  （现在是0-360，角度值）
+
+-------------------- 指令集 END ----------------------
+
+

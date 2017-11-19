@@ -1,0 +1,89 @@
+{
+  "data" : {
+    "version" : 1,
+    "airblock": {
+      "en": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      },
+      "cn": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      }
+    },
+    "mbot": {
+      "en": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      },
+      "cn": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 0
+      }
+    },
+    "starter": {
+      "en": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      },
+      "cn": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      }
+    },
+    "ranger": {
+      "en": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      },
+      "cn": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      }
+    },
+    "ultimate2.0": {
+      "en": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      },
+      "cn": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      }
+    },
+    "servo": {
+      "en": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      },
+      "cn": {
+        "image": "http://appinventor.makeblock.com/advertisementenv7.jpg",
+        "link": "http://us.makeblock.com/topic/54/draw-run-the-new-widget-is-available-now",
+        "title": "mBot玩起来",
+        "show": 1
+      }
+    }
+  }
+}

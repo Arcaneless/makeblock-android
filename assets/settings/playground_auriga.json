@@ -1,0 +1,51 @@
+{
+  "play": [
+    {
+      "action": "playground_car_ranger",
+      "title": "cp_title_drive",
+      "cover": "cover-playground-mBot Ranger - Controller.png"
+    },
+    {
+      "action": "playground_path_ranger",
+      "title": "cp_title_draw_and_run",
+      "cover": "cover-playground-mBot Ranger - DrawAndRun.png"
+    },
+    {
+      "action": "playground_music_ranger",
+      "title": "cp_title_musician",
+      "cover": "cover-playground-mBot Ranger - Music.png"
+    },
+    {
+      "action": "playground_voice_ranger",
+      "title": "cp_title_voice_control",
+      "cover": "cover-playground-mBot Ranger - VoiceControl.png"
+    },
+    {
+      "action": "playground_line_follower_ranger",
+      "title": "cp_title_follow_line",
+      "cover": "cover-playground-mBot Ranger - LineFollow.png"
+    },
+    {
+      "action": "playground_avoid_ranger",
+      "title": "cp_title_avoid_obstacle",
+      "cover": "cover-playground-mBot Ranger - ObstacleVoid.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_mbot_ranger_racing_car",
+      "cover": "cover-program-mBot Ranger - Racing Car.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_mbot_ranger_nervous_bird",
+      "cover": "cover-program-mBot Ranger - Nervous Bird.png"
+    }
+  ],
+  "expand": [
+    {
+      "action": "expand_controlpannel",
+      "title": "cp_mbot_ranger_laser_blade",
+      "cover": "cover-program-mBot Ranger - Laser Blade.png"
+    }
+  ]
+}

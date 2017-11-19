@@ -1,0 +1,1211 @@
+{
+    "MBWPathController": {
+        "className": "MBWPathController",
+        "name": "control_widget_lu_jing_kong_zhi",
+        "type": "MBWPathController"
+    },
+    "ShakeSwitch": {
+        "className": "MBWSwitch",
+        "type": "Switch",
+        "name": "control_widget_yao_yi_yao",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ id=@w00yTXMYhNIsIanLIVVX@ x=@-307@ y=@144@><next><block type=@controls_repeat_forever@ id=@nNkdCSINe7asELanKXFH@><statement name=@DO@><block type=@controls_if@ id=@tJN9w9S7Ey9FEtdGcfin@><value name=@IF0@><block type=@tablet_shaked@ id=@iZEmJjlxwBdbIpbC2h0Q@></block></value><statement name=@DO0@><block type=@move_run@ id=@MuVGKVhLHWdCYY1vjK9W@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><shadow type=@math_number@ id=@xFGIQs9GvQTcVbwVvPoh@><field name=@NUM@>255</field></shadow></value><next><block type=@controls_repeat_forever@ id=@0ZAEI0m5LUMGjFN5wk1i@><statement name=@DO@><block type=@wait@ id=@ZrQpqXuCEqenk2ZSeiIF@><value name=@DELAY@><shadow type=@math_number@ id=@bXNUWEPlgI1FIiLzMAfm@><field name=@NUM@>0.1</field></shadow></value><next><block type=@controls_if@ id=@JFfKOmL96XqnmLhmhD3J@><value name=@IF0@><block type=@logic_negate@ id=@xtbSpGq0ULoTS4jYyAy7@><value name=@BOOL@><block type=@tablet_shaked@ id=@MkanhkLrySx1TIF17MQU@></block></value></block></value><statement name=@DO0@><block type=@controls_flow_statements@ id=@SDRcWmp7tDmBRaoEgK2L@><field name=@FLOW@>BREAK</field></block></statement></block></next></block></statement></block></next></block></statement><next><block type=@move_stop@ id=@TZjHalHN7XtAK0hSL1fH@></block></next></block></statement></block></next></block><block type=@when_switch_off@ id=@m8LMBA1l42KU6Ji6T1Fl@ x=@107@ y=@128@><next><block type=@move_stop@ id=@7epYe78n1sGTzGTA3LN4@></block></next></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##m8LMBA1l42KU6Ji6T1Fl##);\\nblockly_js_func_when_switch_off();\\nhighlightBlock(##7epYe78n1sGTzGTA3LN4##);\\nblockly_js_func_move_stop();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##w00yTXMYhNIsIanLIVVX##);\\nblockly_js_func_when_switch_on();\\nhighlightBlock(##nNkdCSINe7asELanKXFH##);\\nwhile (true) {\\n  highlightBlock(##tJN9w9S7Ey9FEtdGcfin##);\\n  if (blockly_js_func_tablet_shaked()) {\\n    highlightBlock(##MuVGKVhLHWdCYY1vjK9W##);\\n    blockly_js_func_move_run(@255@,@FORWARD@);\\n    highlightBlock(##0ZAEI0m5LUMGjFN5wk1i##);\\n    while (true) {\\n      highlightBlock(##ZrQpqXuCEqenk2ZSeiIF##);\\n      wait(0.1);\\n      highlightBlock(##JFfKOmL96XqnmLhmhD3J##);\\n      if (!blockly_js_func_tablet_shaked()) {\\n        highlightBlock(##SDRcWmp7tDmBRaoEgK2L##);\\n        break;\\n      }\\n      highlightBlock(##0ZAEI0m5LUMGjFN5wk1i##);\\n    }\\n  }\\n  highlightBlock(##TZjHalHN7XtAK0hSL1fH##);\\n  blockly_js_func_move_stop();\\n  highlightBlock(##nNkdCSINe7asELanKXFH##);\\n}\\n\"]}"
+            }
+        }
+    },
+    "GravitySwitch": {
+        "className": "MBWSwitch",
+        "type": "Switch",
+        "name": "control_widget_zhong_li_kong_zhi",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ id=@nF2SpakaQ2aUG0cJ2KGE@ x=@-36@ y=@0@><next><block type=@controls_repeat_forever@ id=@0ijSVkg5g3kkCnfCDmMq@><statement name=@DO@><block type=@controls_if@ id=@4VG2hlGkSfLqnwzcRBUd@><value name=@IF0@><block type=@tablet_tilt_fb@ id=@B8ru1PUYb85ZSw5uT7RU@><field name=@DIRECTION@>FORWARD</field></block></value><statement name=@DO0@><block type=@move_run@ id=@7b0Lt4bxzTObmEZb9pjD@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><shadow type=@math_number@ id=@1X5CgTgSvHU5YdTnV4Ff@><field name=@NUM@>200</field></shadow></value></block></statement><next><block type=@controls_if@ id=@ADSAXZz3CjyR1VopO9cy@><value name=@IF0@><block type=@tablet_tilt_fb@ id=@tyIhzHZFTuORYRQPikVy@><field name=@DIRECTION@>BACKWARD</field></block></value><statement name=@DO0@><block type=@move_run@ id=@BE69gs4cJHc9tzqrYuAB@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><shadow type=@math_number@ id=@yOWHODhKn0jaFEIg3emJ@><field name=@NUM@>200</field></shadow></value></block></statement><next><block type=@controls_if@ id=@efz6os9L34bGwoxXYVaA@><value name=@IF0@><block type=@tablet_tilt_lr@ id=@H8wsalvsPeAgXbeHesAF@><field name=@DIRECTION@>LEFT</field></block></value><statement name=@DO0@><block type=@move_turn@ id=@39SMmYQJkN04WfJGsdI0@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><shadow type=@math_number@ id=@rtLVVaOVeLApAjGSLJ62@><field name=@NUM@>90</field></shadow></value></block></statement><next><block type=@controls_if@ id=@ssH9gGPBc3ynp6eDWBmB@><value name=@IF0@><block type=@tablet_tilt_lr@ id=@ATJgoWK86iDCD6tE5dQY@><field name=@DIRECTION@>RIGHT</field></block></value><statement name=@DO0@><block type=@move_turn@ id=@XNXpX33iRmFR5lpFSd6m@><field name=@DIRECTION@>RIGHT</field><value name=@SPEED@><shadow type=@math_number@ id=@fTIO9quFbGGPXimtiOTO@><field name=@NUM@>90</field></shadow></value></block></statement></block></next></block></next></block></next></block></statement></block></next></block><block type=@when_switch_off@ id=@Md2bQeNqodwfZZH0llrI@ x=@387@ y=@2@><next><block type=@move_stop@ id=@khHSaWsmetshoITsifqu@></block></next></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##Md2bQeNqodwfZZH0llrI##);\\nblockly_js_func_when_switch_off();\\nhighlightBlock(##khHSaWsmetshoITsifqu##);\\nblockly_js_func_move_stop();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##nF2SpakaQ2aUG0cJ2KGE##);\\nblockly_js_func_when_switch_on();\\nhighlightBlock(##0ijSVkg5g3kkCnfCDmMq##);\\nwhile (true) {\\n  highlightBlock(##4VG2hlGkSfLqnwzcRBUd##);\\n  if (blockly_js_func_tablet_tilt_fb(@FORWARD@)) {\\n    highlightBlock(##7b0Lt4bxzTObmEZb9pjD##);\\n    blockly_js_func_move_run(@200@,@FORWARD@);\\n  }\\n  highlightBlock(##ADSAXZz3CjyR1VopO9cy##);\\n  if (blockly_js_func_tablet_tilt_fb(@BACKWARD@)) {\\n    highlightBlock(##BE69gs4cJHc9tzqrYuAB##);\\n    blockly_js_func_move_run(@200@,@BACKWARD@);\\n  }\\n  highlightBlock(##efz6os9L34bGwoxXYVaA##);\\n  if (blockly_js_func_tablet_tilt_lr(@LEFT@)) {\\n    highlightBlock(##39SMmYQJkN04WfJGsdI0##);\\n    blockly_js_func_move_turn(@90@,@LEFT@);\\n  }\\n  highlightBlock(##ssH9gGPBc3ynp6eDWBmB##);\\n  if (blockly_js_func_tablet_tilt_lr(@RIGHT@)) {\\n    highlightBlock(##XNXpX33iRmFR5lpFSd6m##);\\n    blockly_js_func_move_turn(@90@,@RIGHT@);\\n  }\\n  highlightBlock(##0ijSVkg5g3kkCnfCDmMq##);\\n}\\n\"]}"
+            }
+        }
+    },
+    "MusicKey": {
+        "className": "MBWMusicKey",
+        "name": "control_widget_music",
+        "type": "MBWMusicKey"
+    },
+    "AirblockFlightJoystick": {
+        "className": "MBWFlightJoystick",
+        "name": "control_widget_direction_joystick",
+        "type": "Joystick"
+    },
+    "AirblockCarJoystick": {
+        "className": "MBWCarJoystick",
+        "name": "control_widget_direction_joystick",
+        "type": "Joystick"
+    },
+    "AirblockAttitudeJoystick": {
+        "className": "MBWFlightAttitudeJoystick",
+        "name": "control_widget_move_joystick",
+        "type": "Joystick"
+    },
+    "AirblockVerticalJoystick": {
+        "className": "MBWVerticalJoystick",
+        "name": "control_widget_move_joystick",
+        "type": "Joystick"
+    },
+    "AirblockDronePowerSwitch": {
+        "className": "MBWSwitch",
+        "name": "control_widget_power",
+        "type": "Switch",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ id=@UML5Zf33BbgOgYZmH8Ql@ x=@200@ y=@100@><next><block type=@begin_power_on@ id=@fMYPWTCFSHuTuETyKHfY@></block></next></block><block type=@when_switch_off@ id=@6lsLrBAxCmH0hjrOfvPq@ x=@200@ y=@260@><next><block type=@begin_power_off@ id=@mIXs7bCsSa5JCiFSeO1M@></block></next></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##6lsLrBAxCmH0hjrOfvPq##);\\nblockly_js_func_when_switch_off();\\nhighlightBlock(##mIXs7bCsSa5JCiFSeO1M##);\\nblockly_js_func_begin_power_off();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##UML5Zf33BbgOgYZmH8Ql##);\\nblockly_js_func_when_switch_on();\\nhighlightBlock(##fMYPWTCFSHuTuETyKHfY##);\\nblockly_js_func_begin_power_on();\\n\"]}"
+            }
+        }
+    },
+    "AirblockDronePowerOnButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "control_widget_power_on",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@YA9Si7xms5RB7FwoLlaF@ x=@200@ y=@100@><next><block type=@begin_power_on@ id=@aJeMGaOr6mjMwlRZ5uVA@></block></next></block><block type=@when_button_pressed_up@ id=@HaDmLjtkycIERW1mhGaL@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##HaDmLjtkycIERW1mhGaL##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##YA9Si7xms5RB7FwoLlaF##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##aJeMGaOr6mjMwlRZ5uVA##);\\nblockly_js_func_begin_power_on();\\n\"]}"
+            }
+        }
+    },
+    "AirblockDronePowerOffButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "control_widget_power_off",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@2jNafLZuqWLygPlP9GJ5@ x=@200@ y=@100@><next><block type=@begin_power_off@ id=@CvjPSaZ9ryEHEkGxdTtV@></block></next></block><block type=@when_button_pressed_up@ id=@L8sO1WJC2F5pJ0Hr4nQn@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##L8sO1WJC2F5pJ0Hr4nQn##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##2jNafLZuqWLygPlP9GJ5##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##CvjPSaZ9ryEHEkGxdTtV##);\\nblockly_js_func_begin_power_off();\\n\"]}"
+            }
+        }
+    },
+    "AirblockFlightInstrument": {
+        "className": "MBWFlightInstrument",
+        "name": "control_widget_flight_instrument",
+        "type": "Display",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ id=@2tFkfyotzoTU5w77VWb4@ x=@79@ y=@101@><next><block type=@controls_repeat_forever@ id=@MwbjkehFVeQBofRWNt0H@><statement name=@DO@><block type=@display_read_x_on_y@ id=@j0iFhnUZ4XUvLL8v7vnF@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_airblock_state@ id=@qulvZ3YyuoGxTSuQgFCE@></block></value><next><block type=@wait@ id=@e51t99XR7P5VCiT2dKzv@><value name=@DELAY@><block type=@math_number@ id=@sFb2tcTWR0K61GGUqo73@><field name=@NUM@>0.5</field></block></value></block></next></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##2tFkfyotzoTU5w77VWb4##);\nblockly_js_func_when_start();\nhighlightBlock(##MwbjkehFVeQBofRWNt0H##);\nwhile (true) {\n  highlightBlock(##j0iFhnUZ4XUvLL8v7vnF##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_airblock_state(),@0@);\n  highlightBlock(##e51t99XR7P5VCiT2dKzv##);\n  wait(0.5);  highlightBlock(##MwbjkehFVeQBofRWNt0H##);\n}\n\"]}"
+            }
+        }
+    },
+    "AirblockSomersaultButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-somersault",
+        "name": "airblock_somersault"
+    },
+    "AirblockCarSMoveButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_smove",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@csuKZZzZsYbj2T4fkSTr@ x=@61@ y=@104@><next><block type=@move_carsmove@ id=@ZheQy0KYgwrtlR0Ar5F4@></block></next></block><block type=@when_button_pressed_up@ id=@1CajwneCLSAxwBItOe4a@ x=@39@ y=@257@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##1CajwneCLSAxwBItOe4a##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##csuKZZzZsYbj2T4fkSTr##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##ZheQy0KYgwrtlR0Ar5F4##);\\nblockly_js_func_move_carsmove();\\n\"]}"
+            }
+        }
+    },
+    "AirblockCarDriftButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-drift",
+        "name": "airblock_drift",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@YrszKcWliIDSQNiTYv0i@ x=@193@ y=@224@><next><block type=@move_carmove@ id=@5fgxfbUYGp1EXgN40Iej@><field name=@DIRECTION@>FORWARD</field><value name=@ANGLE@><block type=@math_number@ id=@lf9fWmbzcmJwOdfRpzxC@><field name=@NUM@>0</field></block></value><value name=@DURATION@><block type=@math_number@ id=@YWOpmzuFtaIHQG8K2G9a@><field name=@NUM@>1.5</field></block></value><next><block type=@wait@ id=@ck6eIgVfoZQENzYNWcDe@><value name=@DELAY@><block type=@math_number@ id=@QkRtxo10Co0tXQ6tOTS2@><field name=@NUM@>1.2</field></block></value><next><block type=@move_carrotate@ id=@8cNL88zAg20KBydSZI0E@><field name=@DIRECTION@>RIGHT</field><value name=@ANGLE@><block type=@math_number@ id=@wfEilwZq0M7jQqXsVZ5B@><field name=@NUM@>150</field></block></value><next><block type=@wait@ id=@aZweqc4oyUGiIwbyUguq@><value name=@DELAY@><block type=@math_number@ id=@nEadjXiDemxGkwpiGmNS@><field name=@NUM@>1</field></block></value><next><block type=@move_carstop@ id=@geBfFUENQx5XilVJQh0G@></block></next></block></next></block></next></block></next></block></next></block><block type=@when_button_pressed_up@ id=@kv9DT2cnt82uHd5ymoCx@ x=@197@ y=@450@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##kv9DT2cnt82uHd5ymoCx##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##YrszKcWliIDSQNiTYv0i##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##5fgxfbUYGp1EXgN40Iej##);\\nblockly_js_func_move_carmove(@FORWARD@,@0@,@1.5@);\\nhighlightBlock(##ck6eIgVfoZQENzYNWcDe##);\\nwait(1.2);\\nhighlightBlock(##8cNL88zAg20KBydSZI0E##);\\nblockly_js_func_move_carrotate(@RIGHT@,@150@);\\nhighlightBlock(##aZweqc4oyUGiIwbyUguq##);\\nwait(1);\\nhighlightBlock(##geBfFUENQx5XilVJQh0G##);\\nblockly_js_func_move_carstop();\\n\"]}"
+            }
+        }
+    },
+    "AirblockCarSuspendButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "control_widget_suspend",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@D8dYbG8b5FVHCsC69iPX@ x=@200@ y=@100@><next><block type=@move_carsuspend@ id=@ySMbvasT9fiGAImFgmOB@></block></next></block><block type=@when_button_pressed_up@ id=@0MxDetql4d2VjZWZHJlZ@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##0MxDetql4d2VjZWZHJlZ##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##D8dYbG8b5FVHCsC69iPX##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##ySMbvasT9fiGAImFgmOB##);\\nblockly_js_func_move_carsuspend();\\n\"]}"
+            }
+        }
+    },
+    "AirblockCarStartButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_start",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@NnNyesq2Srj5pR0XU8Ko@ x=@200@ y=@100@><next><block type=@move_start@ id=@vyrqTXpeavPvkBmjhZm4@></block></next></block><block type=@when_button_pressed_up@ id=@IU794hSYmiJJyn6QAEc8@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\n\n\nhighlightBlock(##IU794hSYmiJJyn6QAEc8##);\nblockly_js_func_when_button_pressed_up();\n\"],\"1\":[\"\n\n\nhighlightBlock(##NnNyesq2Srj5pR0XU8Ko##);\nblockly_js_func_when_button_pressed_down();\nhighlightBlock(##vyrqTXpeavPvkBmjhZm4##);\nblockly_js_func_move_start();\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneTakeOffButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "control_widget_takeoff",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@vbZ2Ls6IdSa9ismPOoEF@ x=@200@ y=@100@><next><block type=@move_droneupdown@ id=@Up0rzX4X7zZmCvL2GabB@><field name=@DIRECTION@>UP</field><value name=@DURATION@><block type=@math_number@ id=@3OOc4DANBReZn2PL6mN5@><field name=@NUM@>2</field></block></value><next><block type=@wait@ id=@Ovf7QJrZ2HVFvS21Sr7q@><value name=@DELAY@><block type=@math_number@ id=@mhnhosiPWXCsZaV1kYdG@><field name=@NUM@>2</field></block></value><next><block type=@move_dronehover@ id=@t1kN4QiWbbpN3iD4KH75@></block></next></block></next></block></next></block><block type=@when_button_pressed_up@ id=@CbgxwGA4LIJucY3O4i1N@ x=@196@ y=@287@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##CbgxwGA4LIJucY3O4i1N##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##vbZ2Ls6IdSa9ismPOoEF##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##Up0rzX4X7zZmCvL2GabB##);\\nblockly_js_func_move_droneupdown(@2@,@UP@);\\nhighlightBlock(##Ovf7QJrZ2HVFvS21Sr7q##);\\nwait(2);\\nhighlightBlock(##t1kN4QiWbbpN3iD4KH75##);\\nblockly_js_func_move_dronehover();\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneLandButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "control_widget_landing",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@xk8aWyTcpdRzLKqqi7h1@ x=@200@ y=@100@><next><block type=@move_droneland@ id=@gIvnpw705y8nuKcFWzhf@></block></next></block><block type=@when_button_pressed_up@ id=@Z7b2rOi8bBVY50My0XkR@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##Z7b2rOi8bBVY50My0XkR##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##xk8aWyTcpdRzLKqqi7h1##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##gIvnpw705y8nuKcFWzhf##);\\nblockly_js_func_move_droneland();\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneEscapeButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "control_widget_escape",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@JukAO68vUcoC5Tc6BZEM@ x=@200@ y=@100@><next><block type=@move_droneescape@ id=@YemQb08crEJzB7Yd6Tfn@></block></next></block><block type=@when_button_pressed_up@ id=@e42CRnPWR3JrQ4JFoxoD@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##e42CRnPWR3JrQ4JFoxoD##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##JukAO68vUcoC5Tc6BZEM##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##YemQb08crEJzB7Yd6Tfn##);\\nblockly_js_func_move_droneescape();\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneSMoveButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_smove",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@csuKZZzZsYbj2T4fkSTr@ x=@200@ y=@100@><next><block type=@move_droneadvancedmove@ id=@tt9bzFI1LFdHM7SKRCUd@><field name=@DIRECTION@>FORWARD</field><field name=@WISE@>CLOCKWISE</field><value name=@ANGLE@><block type=@math_number@ id=@CSeJkYkvL7smUiWtyZfW@><field name=@NUM@>90</field></block></value><value name=@DURATION@><block type=@math_number@ id=@O8o8FygJO4WpdzVPtsXf@><field name=@NUM@>1</field></block></value><next><block type=@wait@ id=@mRGBySxpfsxqayX3PWQX@><value name=@DELAY@><block type=@math_number@ id=@QuthrbVKcF935I4TLHKP@><field name=@NUM@>1</field></block></value><next><block type=@move_droneadvancedmove@ id=@dEhNgl58RfEfTV1kkUqR@><field name=@DIRECTION@>FORWARD</field><field name=@WISE@>ANTICLOCKWISE</field><value name=@ANGLE@><block type=@math_number@ id=@KJFuMygvtEVEQfipcALz@><field name=@NUM@>120</field></block></value><value name=@DURATION@><block type=@math_number@ id=@SKvMbJddTUQBuVlFSUn4@><field name=@NUM@>1</field></block></value></block></next></block></next></block></next></block><block type=@when_button_pressed_up@ id=@1CajwneCLSAxwBItOe4a@ x=@201@ y=@390@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##1CajwneCLSAxwBItOe4a##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##csuKZZzZsYbj2T4fkSTr##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##tt9bzFI1LFdHM7SKRCUd##);\\nblockly_js_func_move_droneadvancedmove(@90@,@1@,@FORWARD@,@CLOCKWISE@);\\nhighlightBlock(##mRGBySxpfsxqayX3PWQX##);\\nwait(1);\\nhighlightBlock(##dEhNgl58RfEfTV1kkUqR##);\\nblockly_js_func_move_droneadvancedmove(@120@,@1@,@FORWARD@,@ANTICLOCKWISE@);\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneCircleButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_circle",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@YilV0sOaaqxsgEDrA2Im@ x=@200@ y=@100@><next><block type=@move_droneadvancedmove@ id=@ekw2LnsoN7aaZvBt01sa@><field name=@DIRECTION@>FORWARD</field><field name=@WISE@>CLOCKWISE</field><value name=@ANGLE@><block type=@math_number@ id=@yfbzyzvgES1dqehx5Qnx@><field name=@NUM@>360</field></block></value><value name=@DURATION@><block type=@math_number@ id=@CPtw5xWZQ813sbZ1h3ic@><field name=@NUM@>3</field></block></value></block></next></block><block type=@when_button_pressed_up@ id=@TA81ytr1qf5qmGGhQUfE@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##TA81ytr1qf5qmGGhQUfE##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##YilV0sOaaqxsgEDrA2Im##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##ekw2LnsoN7aaZvBt01sa##);\\nblockly_js_func_move_droneadvancedmove(@360@,@3@,@FORWARD@,@CLOCKWISE@);\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneTriangleButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_triangle",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@STgKvzL2DDdfhsvUHpaw@ x=@200@ y=@100@><next><block type=@move_dronemove@ id=@O4CS9TxyZVsuOP0zBnJt@><field name=@DIRECTION@>FORWARD</field><value name=@DURATION@><block type=@math_number@ id=@tvHOHzbjpts6cNzFscjk@><field name=@NUM@>1</field></block></value><next><block type=@wait@ id=@FAvrYaeDEJCJh2inHi4y@><value name=@DELAY@><block type=@math_number@ id=@QzQdH4grilEvctu0FWh2@><field name=@NUM@>1</field></block></value><next><block type=@move_dronerotate@ id=@uOcHn8rmrvcNzv8YtcU8@><field name=@DIRECTION@>LEFT</field><value name=@ANGLE@><block type=@math_number@ id=@H6V3HPMr5deAU1g4rJHO@><field name=@NUM@>120</field></block></value><next><block type=@wait@ id=@vFCFKeDDLDKi6wiAwtR8@><value name=@DELAY@><block type=@math_number@ id=@BKFEBPqy2utMyFLsjaH7@><field name=@NUM@>2</field></block></value><next><block type=@move_dronemove@ id=@cfJ1kycRw19gWXAvpshX@><field name=@DIRECTION@>FORWARD</field><value name=@DURATION@><block type=@math_number@ id=@Kmbxpv50F8jwxahVy65u@><field name=@NUM@>1</field></block></value><next><block type=@wait@ id=@BG4CdPEej73x1eGUvH8T@><value name=@DELAY@><block type=@math_number@ id=@ymvtZ3GDl3Kc1GnftVvO@><field name=@NUM@>1</field></block></value><next><block type=@move_dronerotate@ id=@3Akyzjw4hhOhLQQKxVrh@><field name=@DIRECTION@>LEFT</field><value name=@ANGLE@><block type=@math_number@ id=@uUmA1ts6yX1z8VZo9sEW@><field name=@NUM@>120</field></block></value><next><block type=@wait@ id=@5cALxvFbKiOA4gfrrYhd@><value name=@DELAY@><block type=@math_number@ id=@igBtQ3rOUW7pFyYpj6HP@><field name=@NUM@>2</field></block></value><next><block type=@move_dronemove@ id=@Qs1AjSSb3ZV5mk18rddB@><field name=@DIRECTION@>FORWARD</field><value name=@DURATION@><block type=@math_number@ id=@tGrNrK6iNOiuV7l2VV6V@><field name=@NUM@>1</field></block></value><next><block type=@wait@ id=@PRF6XDvgVCzEaYeJDJRb@><value name=@DELAY@><block type=@math_number@ id=@TGdRUNTT8PLGfkRKCSAp@><field name=@NUM@>1</field></block></value><next><block type=@move_dronerotate@ id=@7YS3EWd1nlO1hyy0uiAB@><field name=@DIRECTION@>LEFT</field><value name=@ANGLE@><block type=@math_number@ id=@Ru0imZwLK6V4O8mraHrS@><field name=@NUM@>120</field></block></value><next><block type=@wait@ id=@0YEFPcaGLWoDIWYtmT1y@><value name=@DELAY@><block type=@math_number@ id=@o9zQAJWYIv7b8twbGell@><field name=@NUM@>2</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block><block type=@when_button_pressed_up@ id=@l4sqX650EzWp9DQiVPDX@ x=@714@ y=@183@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##l4sqX650EzWp9DQiVPDX##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##STgKvzL2DDdfhsvUHpaw##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##O4CS9TxyZVsuOP0zBnJt##);\\nblockly_js_func_move_dronemove(@1@,@FORWARD@);\\nhighlightBlock(##FAvrYaeDEJCJh2inHi4y##);\\nwait(1);\\nhighlightBlock(##uOcHn8rmrvcNzv8YtcU8##);\\nblockly_js_func_move_dronerotate(@LEFT@,@120@);\\nhighlightBlock(##vFCFKeDDLDKi6wiAwtR8##);\\nwait(2);\\nhighlightBlock(##cfJ1kycRw19gWXAvpshX##);\\nblockly_js_func_move_dronemove(@1@,@FORWARD@);\\nhighlightBlock(##BG4CdPEej73x1eGUvH8T##);\\nwait(1);\\nhighlightBlock(##3Akyzjw4hhOhLQQKxVrh##);\\nblockly_js_func_move_dronerotate(@LEFT@,@120@);\\nhighlightBlock(##5cALxvFbKiOA4gfrrYhd##);\\nwait(2);\\nhighlightBlock(##Qs1AjSSb3ZV5mk18rddB##);\\nblockly_js_func_move_dronemove(@1@,@FORWARD@);\\nhighlightBlock(##PRF6XDvgVCzEaYeJDJRb##);\\nwait(1);\\nhighlightBlock(##7YS3EWd1nlO1hyy0uiAB##);\\nblockly_js_func_move_dronerotate(@LEFT@,@120@);\\nhighlightBlock(##0YEFPcaGLWoDIWYtmT1y##);\\nwait(2);\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneRollButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_move_roll",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@olcFAKUjDKjtSmP7ypr8@ x=@200@ y=@100@><next><block type=@move_droneroll@ id=@cV5KAEguCKyksO0InUpU@></block></next></block><block type=@when_button_pressed_up@ id=@ZUW5xPPV9IOvYQy7pb9e@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##ZUW5xPPV9IOvYQy7pb9e##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##olcFAKUjDKjtSmP7ypr8##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##cV5KAEguCKyksO0InUpU##);\\nblockly_js_func_move_droneroll();\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneShakeButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_shake",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@olcFAKUjDKjtSmP7ypr8@ x=@200@ y=@100@><next><block type=@move_droneshake@ id=@Df5VzFz64jNtfmVmAauw@><value name=@DURATION@><block type=@math_number@ id=@tOldqUBCdDCwJUZBd1qO@><field name=@NUM@>0.5</field></block></value></block></next></block><block type=@when_button_pressed_up@ id=@ZUW5xPPV9IOvYQy7pb9e@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##ZUW5xPPV9IOvYQy7pb9e##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##olcFAKUjDKjtSmP7ypr8##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##Df5VzFz64jNtfmVmAauw##);\\nblockly_js_func_move_droneshake(@0.5@);\\n\"]}"
+            }
+        }
+    },
+    "AirblockDroneSpiralRiseButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-s",
+        "name": "airblock_spiral_rise",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@hz0JewRVHhVl2QVdD1hH@ x=@93@ y=@34@><next><block type=@move_dronerotateupdown@ id=@11mDSNDpOOZmByOKlM61@><field name=@DIRECTION@>UP</field><value name=@DURATION@><block type=@math_number@ id=@ype2W9QAOHeJ3k7C5H9P@><field name=@NUM@>2.02</field></block></value></block></next></block><block type=@when_button_pressed_up@ id=@9hT0I4shNQnZstCgGLuD@ x=@93@ y=@245@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock(##9hT0I4shNQnZstCgGLuD##);\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock(##hz0JewRVHhVl2QVdD1hH##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##11mDSNDpOOZmByOKlM61##);\\nblockly_js_func_move_dronerotateupdown(@2.02@,@UP@);\\n\"]}"
+            }
+        }
+    },
+    "AirblockSpiralButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-spiral",
+        "name": "airblock_spiral"
+    },
+    "AirblockUndulatingButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-undulating",
+        "name": "airblock_undulating"
+    },
+    "AirblockLedButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "airblock-btn-icon-led",
+        "name": "airblock_led"
+    },
+    "Joystick": {
+        "className": "MBWJoystick",
+        "type": "control_widget_move_joystick",
+        "name": "control_widget_joystick"
+    },
+    "Speaker": {
+        "className": "MBWSpeaker",
+        "type": "Speaker",
+        "name": "control_widget_speaker"
+    },
+    "ServoSlider": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-servo",
+        "config": null,
+        "type": "Slider",
+        "name": "control_widget_servo",
+        "data": {
+            "mcore": {
+                "port": "1",
+                "slot": "1",
+                "portFilter": "by",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ id=@YJbyA0MD6FlREWRJGwxy@ x=@51@ y=@213@><next><block type=@move_set_servo_motor@ id=@Y2cRZtjkjFFfI8ieeYn0@><field name=@PORT@>PORT-1</field><field name=@SLOT@>SLOT-1</field><value name=@DEGREE@><block type=@math_arithmetic@ id=@MaCSbL0QmJDxVClX8lVB@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ id=@w94HlKinHoggTSt6SLso@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ id=@XTgFe8xViimE1jLUeLyC@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ id=@zxXhPZMmPL5QLR72OqOR@><field name=@NUM@>180</field></block></value><value name=@B@><block type=@math_number@ id=@Rg4wqDhXdsPQVz9FBrgD@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##YJbyA0MD6FlREWRJGwxy##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##Y2cRZtjkjFFfI8ieeYn0##);\nblockly_js_func_move_set_servo_motor(@PORT-1@,@SLOT-1@,blockly_js_func_detect_get_slider_value(@0@) * (180 / 100));\n\"]}"
+            },
+            "default": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ id=@A9gaKWoirOW2rpMOtdaF@ x=@152@ y=@198@><next><block type=@move_set_servo_motor@ id=@UwCsgkalcw7Jn7kVWJa3@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field><value name=@DEGREE@><block type=@math_arithmetic@ id=@V9idkyELeCXnzqTLPeM8@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ id=@jebJ1mAmFFzgf3zJyEWu@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ id=@jYtU3ge6JTXPWQzDku7f@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ id=@NK7cyGEvbcDqIziLjaKb@><field name=@NUM@>180</field></block></value><value name=@B@><block type=@math_number@ id=@7lzASJgBhIaO5SYBOYOT@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##A9gaKWoirOW2rpMOtdaF##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##UwCsgkalcw7Jn7kVWJa3##);\nblockly_js_func_move_set_servo_motor(@PORT-6@,@SLOT-1@,blockly_js_func_detect_get_slider_value(@0@) * (180 / 100));\n\"]}"
+            }
+        }
+    },
+    "EncoderMotorSlider": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-encodermotor",
+        "type": "Slider",
+        "name": "control_widget_encoder_motor",
+        "data": {
+            "auriga": {
+                "port": "0",
+                "portFilter": "re",
+                "slot": "1",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@128@ y=@164@><next><block type=@move_set_encoder_motor@ data-devicetype=@auriga-megaPi@><field name=@SLOT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('15');\nblockly_js_func_when_slider_changed();\nhighlightBlock('16');\nblockly_js_func_move_set_encoder_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"] }",
+                "icon": "sensor-icon-encodermotor"
+            },
+            "orion": {
+                "port": "1",
+                "portFilter": "R",
+                "slot": "1",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@-9@ y=@239@><next><block type=@move_set_common_encoder_motor@ data-devicetype=@all@ data-not-devicetype=@megaPi-mbot@><field name=@PORT@>PORT-1</field><field name=@SLOT@>SLOT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value><value name=@DISTANCE@><block type=@math_number@><field name=@NUM@>1000</field></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##23##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##45##);\nblockly_js_func_move_set_common_encoder_motor(@PORT-1@,@SLOT-1@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100),@1000@);\n\"]}"
+            },
+            "megaPi": {
+                "port": "1",
+                "portFilter": "R",
+                "directControlType": "encodermotor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@71@ y=@256@><next><block type=@move_set_encoder_motor@ data-devicetype=@auriga-megaPi@><field name=@SLOT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##9##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##31##);\nblockly_js_func_move_set_encoder_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "EncoderMotorSlider1": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-encodermotor",
+        "type": "Slider",
+        "name": "control_widget_encoder_motor_one",
+        "data": {
+            "megaPi": {
+                "port": "1",
+                "portFilter": "R",
+                "directControlType": "encodermotor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@71@ y=@256@><next><block type=@move_set_encoder_motor@ data-devicetype=@auriga-megaPi@><field name=@SLOT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##9##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##31##);\nblockly_js_func_move_set_encoder_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            },
+            "auriga": {
+                "port": "0",
+                "slot": "1",
+                "portFilter": "re",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@71@ y=@256@><next><block type=@move_set_encoder_motor@ data-devicetype=@auriga-megaPi@><field name=@SLOT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##9##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##31##);\nblockly_js_func_move_set_encoder_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "EncoderMotorSlider2": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-encodermotor",
+        "type": "Slider",
+        "name": "control_widget_encoder_motor_two",
+        "data": {
+            "megaPi": {
+                "port": "2",
+                "portFilter": "R",
+                "directControlType": "encodermotor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@71@ y=@256@><next><block type=@move_set_encoder_motor@ data-devicetype=@auriga-megaPi@><field name=@SLOT@>PORT-2</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##9##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##31##);\nblockly_js_func_move_set_encoder_motor(@PORT-2@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            },
+            "auriga": {
+                "port": "0",
+                "slot": "2",
+                "portFilter": "re",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@71@ y=@256@><next><block type=@move_set_encoder_motor@ data-devicetype=@auriga-megaPi@><field name=@SLOT@>PORT-2</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##9##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##31##);\nblockly_js_func_move_set_encoder_motor(@PORT-2@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "EncoderMotorSlider3": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-encodermotor",
+        "type": "Slider",
+        "name": "control_widget_encoder_motor_three",
+        "data": {
+            "megaPi": {
+                "port": "3",
+                "portFilter": "R",
+                "directControlType": "encodermotor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@71@ y=@256@><next><block type=@move_set_encoder_motor@ data-devicetype=@auriga-megaPi@><field name=@SLOT@>PORT-3</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##9##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##31##);\nblockly_js_func_move_set_encoder_motor(@PORT-3@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "StepperMotorSlider": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-steppermotor",
+        "type": "Slider",
+        "config": null,
+        "name": "control_widget_stepper_motor",
+        "data": {
+            "megaPi": {
+                "port": "1",
+                "portFilter": "R",
+                "directControlType": "steppermotor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@89@ y=@159@><next><block type=@move_set_stepper_motor@ data-devicetype=@all@ data-not-devicetype=@mcore@><field name=@PORT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>30000</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value><value name=@DISTANCE@><block type=@math_number@><field name=@NUM@>10000</field></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('145');\nblockly_js_func_when_slider_changed();\nhighlightBlock('146');\nblockly_js_func_move_set_stepper_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (30000 / 100),@10000@);\n\"]}"
+            },
+            "default": {
+                "port": "1",
+                "portFilter": "R",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@89@ y=@159@><next><block type=@move_set_stepper_motor@ data-devicetype=@all@ data-not-devicetype=@mcore@><field name=@PORT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@><field name=@NUM@>30000</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value><value name=@DISTANCE@><block type=@math_number@><field name=@NUM@>10000</field></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('145');\nblockly_js_func_when_slider_changed();\nhighlightBlock('146');\nblockly_js_func_move_set_stepper_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (30000 / 100),@10000@);\n\"]}"
+            }
+        }
+    },
+    "DCMotorSlider": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-motor",
+        "type": "Slider",
+        "config": null,
+        "name": "control_widget_dc_motor",
+        "data": {
+            "auriga": {
+                "port": "1",
+                "portFilter": "r",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@192@ y=@228@><next><block type=@move_set_dc_motor@ data-devicetype=@all@><field name=@PORT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('40');\nblockly_js_func_when_slider_changed();\nhighlightBlock('41');\nblockly_js_func_move_set_dc_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            },
+            "megaPi": {
+                "port": "12",
+                "portFilter": "r",
+                "directControlType": "dcmotor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@192@ y=@228@><next><block type=@move_set_dc_motor@ data-devicetype=@all@><field name=@PORT@>PORT-12</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('40');\nblockly_js_func_when_slider_changed();\nhighlightBlock('41');\nblockly_js_func_move_set_dc_motor(@PORT-12@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            },
+            "default": {
+                "port": "10",
+                "portFilter": "r",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@192@ y=@228@><next><block type=@move_set_dc_motor@ data-devicetype=@all@><field name=@PORT@>PORT-10</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##162##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##163##);\nblockly_js_func_move_set_dc_motor(@PORT-10@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "DCMotorSlider1": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-motor",
+        "type": "Slider",
+        "config": null,
+        "name": "control_widget_dc_motor_one",
+        "data": {
+            "default": {
+                "port": "9",
+                "portFilter": "r",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@192@ y=@228@><next><block type=@move_set_dc_motor@ data-devicetype=@all@><field name=@PORT@>PORT-9</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##162##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##163##);\nblockly_js_func_move_set_dc_motor(@PORT-9@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "DCMotorSlider2": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-motor",
+        "type": "Slider",
+        "config": null,
+        "name": "control_widget_dc_motor_two",
+        "data": {
+            "default": {
+                "port": "10",
+                "portFilter": "r",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@192@ y=@228@><next><block type=@move_set_dc_motor@ data-devicetype=@all@><field name=@PORT@>PORT-10</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##162##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##163##);\nblockly_js_func_move_set_dc_motor(@PORT-10@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "DCMotorSlider3": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-motor",
+        "type": "Slider",
+        "config": null,
+        "name": "control_widget_dc_motor_three",
+        "data": {
+            "orion": {
+                "port": "1",
+                "portFilter": "r",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@192@ y=@228@><next><block type=@move_set_dc_motor@ data-devicetype=@all@><field name=@PORT@>PORT-1</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##162##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##163##);\nblockly_js_func_move_set_dc_motor(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "DCMotorSlider4": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-motor",
+        "type": "Slider",
+        "config": null,
+        "name": "control_widget_dc_motor_four",
+        "data": {
+            "orion": {
+                "port": "2",
+                "portFilter": "r",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@192@ y=@228@><next><block type=@move_set_dc_motor@ data-devicetype=@all@><field name=@PORT@>PORT-2</field><value name=@SPEED@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##162##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##163##);\nblockly_js_func_move_set_dc_motor(@PORT-2  ·@,blockly_js_func_detect_get_slider_value(@0@) * (255 / 100));\n\"]}"
+            }
+        }
+    },
+    "LineFollowingSwitch": {
+        "className": "MBWSwitch",
+        "iconName": "sensor-icon-linefollowing",
+        "type": "Switch",
+        "name": "control_form_line_following",
+        "data": {
+            "auriga": {
+                "port": "9",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ data-widgettype=@Switch@ data-blocktype=@when@ x=@132@ y=@50@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>BLACK_BLACK</field><field name=@PORT@>PORT-9</field></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>BLACK_WHITE</field><field name=@PORT@>PORT-9</field></block></value><statement name=@DO0@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>WHITE_BLACK</field><field name=@PORT@>PORT-9</field></block></value><statement name=@DO0@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>RIGHT</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>WHITE_WHITE</field><field name=@PORT@>PORT-9</field></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_switch_changed@ data-devicetype=@all@><field name=@SWITCH@>0</field><field name=@STATE@>0</field></block></value><statement name=@DO0@><block type=@move_stop@ data-devicetype=@all@><next><block type=@controls_flow_statements@ data-devicetype=@all@><field name=@FLOW@>BREAK</field></block></next></block></statement></block></next></block></next></block></next></block></next></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('45');\nblockly_js_func_when_switch_on();\nhighlightBlock('46');\nwhile (true) {\n  highlightBlock('47');\n  if (blockly_js_func_event_linefollower_reads(@BLACK_BLACK@,@PORT-9@)) {\n    highlightBlock('49');\n    blockly_js_func_move_run(@100@,@FORWARD@);\n  }\n  highlightBlock('51');\n  if (blockly_js_func_event_linefollower_reads(@BLACK_WHITE@,@PORT-9@)) {\n    highlightBlock('53');\n    blockly_js_func_move_turn(@100@,@LEFT@);\n  }\n  highlightBlock('55');\n  if (blockly_js_func_event_linefollower_reads(@WHITE_BLACK@,@PORT-9@)) {\n    highlightBlock('57');\n    blockly_js_func_move_turn(@100@,@RIGHT@);\n  }\n  highlightBlock('59');\n  if (blockly_js_func_event_linefollower_reads(@WHITE_WHITE@,@PORT-9@)) {\n    highlightBlock('61');\n    blockly_js_func_move_run(@100@,@BACKWARD@);\n  }\n  highlightBlock('63');\n  if (blockly_js_func_event_switch_changed(@0@,@0@)) {\n    highlightBlock('65');\n    blockly_js_func_move_stop();\n    highlightBlock('66');\n    break;\n  }\n  highlightBlock('46');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "2",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ data-widgettype=@Switch@ data-blocktype=@when@ x=@132@ y=@50@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>BLACK_BLACK</field><field name=@PORT@>PORT-2</field></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>BLACK_WHITE</field><field name=@PORT@>PORT-2</field></block></value><statement name=@DO0@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>RIGHT</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>80</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>WHITE_BLACK</field><field name=@PORT@>PORT-2</field></block></value><statement name=@DO0@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>80</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>WHITE_WHITE</field><field name=@PORT@>PORT-2</field></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_switch_changed@ data-devicetype=@all@><field name=@SWITCH@>0</field><field name=@STATE@>0</field></block></value><statement name=@DO0@><block type=@move_stop@ data-devicetype=@all@><next><block type=@controls_flow_statements@ data-devicetype=@all@><field name=@FLOW@>BREAK</field></block></next></block></statement></block></next></block></next></block></next></block></next></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##23##);\nblockly_js_func_when_switch_on();\nhighlightBlock(##24##);\nwhile (true) {\n  highlightBlock(##25##);\n  if (blockly_js_func_event_linefollower_reads(@BLACK_BLACK@,@PORT-2@)) {\n    highlightBlock(##27##);\n    blockly_js_func_move_run(@100@,@FORWARD@);\n  }\n  highlightBlock(##29##);\n  if (blockly_js_func_event_linefollower_reads(@BLACK_WHITE@,@PORT-2@)) {\n    highlightBlock(##31##);\n    blockly_js_func_move_turn(@80@,@RIGHT@);\n  }\n  highlightBlock(##33##);\n  if (blockly_js_func_event_linefollower_reads(@WHITE_BLACK@,@PORT-2@)) {\n    highlightBlock(##35##);\n    blockly_js_func_move_turn(@80@,@LEFT@);\n  }\n  highlightBlock(##37##);\n  if (blockly_js_func_event_linefollower_reads(@WHITE_WHITE@,@PORT-2@)) {\n    highlightBlock(##39##);\n    blockly_js_func_move_run(@100@,@BACKWARD@);\n  }\n  highlightBlock(##41##);\n  if (blockly_js_func_event_switch_changed(@0@,@0@)) {\n    highlightBlock(##43##);\n    blockly_js_func_move_stop();\n    highlightBlock(##44##);\n    break;\n  }\n  highlightBlock(##24##);\n}\n\"]}"
+            },
+            "megaPi": {
+                "port": "8",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ data-widgettype=@Switch@ data-blocktype=@when@ x=@132@ y=@50@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>BLACK_BLACK</field><field name=@PORT@>PORT-8</field></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>BLACK_WHITE</field><field name=@PORT@>PORT-8</field></block></value><statement name=@DO0@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>WHITE_BLACK</field><field name=@PORT@>PORT-8</field></block></value><statement name=@DO0@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>RIGHT</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_linefollower_reads@ data-devicetype=@all@><field name=@VALUE@>WHITE_WHITE</field><field name=@PORT@>PORT-8</field></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>100</field></block></value></block></statement><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_switch_changed@ data-devicetype=@all@><field name=@SWITCH@>0</field><field name=@STATE@>0</field></block></value><statement name=@DO0@><block type=@move_stop@ data-devicetype=@all@><next><block type=@controls_flow_statements@ data-devicetype=@all@><field name=@FLOW@>BREAK</field></block></next></block></statement></block></next></block></next></block></next></block></next></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('45');\nblockly_js_func_when_switch_on();\nhighlightBlock('46');\nwhile (true) {\n  highlightBlock('47');\n  if (blockly_js_func_event_linefollower_reads(@BLACK_BLACK@,@PORT-8@)) {\n    highlightBlock('49');\n    blockly_js_func_move_run(@100@,@FORWARD@);\n  }\n  highlightBlock('51');\n  if (blockly_js_func_event_linefollower_reads(@BLACK_WHITE@,@PORT-8@)) {\n    highlightBlock('53');\n    blockly_js_func_move_turn(@100@,@LEFT@);\n  }\n  highlightBlock('55');\n  if (blockly_js_func_event_linefollower_reads(@WHITE_BLACK@,@PORT-8@)) {\n    highlightBlock('57');\n    blockly_js_func_move_turn(@100@,@RIGHT@);\n  }\n  highlightBlock('59');\n  if (blockly_js_func_event_linefollower_reads(@WHITE_WHITE@,@PORT-8@)) {\n    highlightBlock('61');\n    blockly_js_func_move_run(@100@,@BACKWARD@);\n  }\n  highlightBlock('63');\n  if (blockly_js_func_event_switch_changed(@0@,@0@)) {\n    highlightBlock('65');\n    blockly_js_func_move_stop();\n    highlightBlock('66');\n    break;\n  }\n  highlightBlock('46');\n}\n\"]}"
+            }
+        }
+    },
+    "ObstacleAvoidingSwitch": {
+        "className": "MBWSwitch",
+        "iconName": "sensor-icon-ultrasonic",
+        "type": "Switch",
+        "name": "control_form_obstacle_avoiding",
+        "data": {
+            "auriga": {
+                "port": "10",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ data-widgettype=@Switch@ data-blocktype=@when@ x=@149@ y=@77@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@variables_set@ data-devicetype=@all@><field name=@VAR@>item</field><value name=@VALUE@><block type=@detect_ultrasonic@ data-devicetype=@all@><field name=@PORT@>PORT-10</field></block></value><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_switch_changed@ data-devicetype=@all@><field name=@SWITCH@>0</field><field name=@STATE@>0</field></block></value><statement name=@DO0@><block type=@move_stop@ data-devicetype=@all@><next><block type=@controls_flow_statements@ data-devicetype=@all@><field name=@FLOW@>BREAK</field></block></next></block></statement><next><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ data-devicetype=@all@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>30</field></block></value></block></value><statement name=@DO0@><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ data-devicetype=@all@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>5</field></block></value></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement><statement name=@ELSE@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement></block></statement><statement name=@ELSE@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement></block></next></block></next></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"var item;\n\n\nhighlightBlock('45');\nblockly_js_func_when_switch_on();\nhighlightBlock('46');\nwhile (true) {\n  highlightBlock('47');\n  item = blockly_js_func_detect_ultrasonic(@PORT-10@);\n  highlightBlock('49');\n  if (blockly_js_func_event_switch_changed(@0@,@0@)) {\n    highlightBlock('51');\n    blockly_js_func_move_stop();\n    highlightBlock('52');\n    break;\n  }\n  highlightBlock('53');\n  if ((item) < 30) {\n    highlightBlock('57');\n    if ((item) < 5) {\n      highlightBlock('61');\n      blockly_js_func_move_run(@160@,@BACKWARD@);\n    } else {\n      highlightBlock('63');\n      blockly_js_func_move_turn(@160@,@LEFT@);\n    }\n  } else {\n    highlightBlock('65');\n    blockly_js_func_move_run(@160@,@FORWARD@);\n  }\n  highlightBlock('46');\n}\n\"]}"
+            },
+            "megaPi": {
+                "port": "7",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ data-widgettype=@Switch@ data-blocktype=@when@ x=@149@ y=@77@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@variables_set@ data-devicetype=@all@><field name=@VAR@>item</field><value name=@VALUE@><block type=@detect_ultrasonic@ data-devicetype=@all@><field name=@PORT@>PORT-7</field></block></value><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_switch_changed@ data-devicetype=@all@><field name=@SWITCH@>0</field><field name=@STATE@>0</field></block></value><statement name=@DO0@><block type=@move_stop@ data-devicetype=@all@><next><block type=@controls_flow_statements@ data-devicetype=@all@><field name=@FLOW@>BREAK</field></block></next></block></statement><next><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ data-devicetype=@all@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>30</field></block></value></block></value><statement name=@DO0@><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ data-devicetype=@all@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>5</field></block></value></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement><statement name=@ELSE@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement></block></statement><statement name=@ELSE@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement></block></next></block></next></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"var item;\n\n\nhighlightBlock('45');\nblockly_js_func_when_switch_on();\nhighlightBlock('46');\nwhile (true) {\n  highlightBlock('47');\n  item = blockly_js_func_detect_ultrasonic(@PORT-7@);\n  highlightBlock('49');\n  if (blockly_js_func_event_switch_changed(@0@,@0@)) {\n    highlightBlock('51');\n    blockly_js_func_move_stop();\n    highlightBlock('52');\n    break;\n  }\n  highlightBlock('53');\n  if ((item) < 30) {\n    highlightBlock('57');\n    if ((item) < 5) {\n      highlightBlock('61');\n      blockly_js_func_move_run(@160@,@BACKWARD@);\n    } else {\n      highlightBlock('63');\n      blockly_js_func_move_turn(@160@,@LEFT@);\n    }\n  } else {\n    highlightBlock('65');\n    blockly_js_func_move_run(@160@,@FORWARD@);\n  }\n  highlightBlock('46');\n}\n\"]}"
+            },
+            "default": {
+                "port": "3",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ data-widgettype=@Switch@ data-blocktype=@when@ x=@149@ y=@77@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@variables_set@ data-devicetype=@all@><field name=@VAR@>item</field><value name=@VALUE@><block type=@detect_ultrasonic@ data-devicetype=@all@><field name=@PORT@>PORT-3</field></block></value><next><block type=@controls_if@ data-devicetype=@all@><value name=@IF0@><block type=@event_switch_changed@ data-devicetype=@all@><field name=@SWITCH@>0</field><field name=@STATE@>0</field></block></value><statement name=@DO0@><block type=@move_stop@ data-devicetype=@all@><next><block type=@controls_flow_statements@ data-devicetype=@all@><field name=@FLOW@>BREAK</field></block></next></block></statement><next><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ data-devicetype=@all@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>30</field></block></value></block></value><statement name=@DO0@><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ data-devicetype=@all@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>5</field></block></value></block></value><statement name=@DO0@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement><statement name=@ELSE@><block type=@move_turn@ data-devicetype=@all@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement></block></statement><statement name=@ELSE@><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>160</field></block></value></block></statement></block></next></block></next></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"var item;\n\n\nhighlightBlock(##45##);\nblockly_js_func_when_switch_on();\nhighlightBlock(##46##);\nwhile (true) {\n  highlightBlock(##47##);\n  item = blockly_js_func_detect_ultrasonic(@PORT-3@);\n  highlightBlock(##49##);\n  if (blockly_js_func_event_switch_changed(@0@,@0@)) {\n    highlightBlock(##51##);\n    blockly_js_func_move_stop();\n    highlightBlock(##52##);\n    break;\n  }\n  highlightBlock(##53##);\n  if ((item) < 30) {\n    highlightBlock(##57##);\n    if ((item) < 5) {\n      highlightBlock(##61##);\n      blockly_js_func_move_run(@160@,@BACKWARD@);\n    } else {\n      highlightBlock(##63##);\n      blockly_js_func_move_turn(@160@,@LEFT@);\n    }\n  } else {\n    highlightBlock(##65##);\n    blockly_js_func_move_run(@160@,@FORWARD@);\n  }\n  highlightBlock(##46##);\n}\n\"]}"
+            }
+        }
+    },
+    "SprintButton": {
+        "className": "MBWIconButton",
+        "icon": "sensor-icon-rocket",
+        "type": "Button",
+        "name": "control_widget_sprint",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ data-widgettype=@Button@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@move_run@ data-devicetype=@all@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@0@><field name=@NUM@>255</field></block></value><next><block type=@wait@ data-devicetype=@all@><value name=@DELAY@><block type=@math_number@><field name=@NUM@>5</field></block></value><next><block type=@move_stop@ data-devicetype=@all@></block></next></block></next></block></next></block><block type=@when_button_pressed_up@ data-widgettype=@Button@ data-blocktype=@when@ x=@199@ y=@393@></block></xml>",
+                "code": "{\"0\":[\"\n\n\nhighlightBlock('111');\nblockly_js_func_when_button_pressed_up();\n\"],\"1\":[\"\n\n\nhighlightBlock('110');\nblockly_js_func_when_button_pressed_down();\nhighlightBlock('122');\nblockly_js_func_move_run(@255@,@FORWARD@);\nhighlightBlock('158');\nwait(5);highlightBlock('168');\nblockly_js_func_move_stop();\n\"]}"
+            }
+        }
+    },
+    "DPad": {
+        "className": "MBWDPad",
+        "type": "DPad",
+        "name": "control_widget_dpad",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_dpad_top_down@ data-widgettype=@DPad@ data-blocktype=@when@ x=@97@ y=@48@><next><block type=@move_run@><field name=@DIRECTION@>FORWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@7@><field name=@NUM@>255</field></block></value></block></next></block><block type=@when_dpad_top_up@ data-widgettype=@DPad@ data-blocktype=@when@ x=@518@ y=@45@><next><block type=@move_stop@></block></next></block><block type=@when_dpad_bottom_down@ data-widgettype=@DPad@ data-blocktype=@when@ x=@95@ y=@175@><next><block type=@move_run@><field name=@DIRECTION@>BACKWARD</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@7@><field name=@NUM@>255</field></block></value></block></next></block><block type=@when_dpad_bottom_up@ data-widgettype=@DPad@ data-blocktype=@when@ x=@512@ y=@166@><next><block type=@move_stop@></block></next></block><block type=@when_dpad_left_down@ data-widgettype=@DPad@ data-blocktype=@when@ x=@100@ y=@300@><next><block type=@move_turn@><field name=@DIRECTION@>LEFT</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@7@><field name=@NUM@>255</field></block></value></block></next></block><block type=@when_dpad_left_up@ data-widgettype=@DPad@ data-blocktype=@when@ x=@505@ y=@315@><next><block type=@move_stop@></block></next></block><block type=@when_dpad_right_down@ data-widgettype=@DPad@ data-blocktype=@when@ x=@101@ y=@421@><next><block type=@move_turn@><field name=@DIRECTION@>RIGHT</field><value name=@SPEED@><block type=@math_number_range@ max=@255@ min=@7@><field name=@NUM@>255</field></block></value></block></next></block><block type=@when_dpad_right_up@ data-widgettype=@DPad@ data-blocktype=@when@ x=@507@ y=@416@><next><block type=@move_stop@></block></next></block></xml>",
+                "code": "{\"10\":[\"\\n\\n\\nhighlightBlock('113');\\nblockly_js_func_when_dpad_top_up();\\nhighlightBlock('164');\\nblockly_js_func_move_stop();\\n\"],\"11\":[\"\\n\\n\\nhighlightBlock('112');\\nblockly_js_func_when_dpad_top_down();\\nhighlightBlock('132');\\nblockly_js_func_move_run(@255@,@FORWARD@);\\n\"],\"20\":[\"\\n\\n\\nhighlightBlock('119');\\nblockly_js_func_when_dpad_right_up();\\nhighlightBlock('213');\\nblockly_js_func_move_stop();\\n\"],\"21\":[\"\\n\\n\\nhighlightBlock('118');\\nblockly_js_func_when_dpad_right_down();\\nhighlightBlock('150');\\nblockly_js_func_move_turn(@255@,@RIGHT@);\\n\"],\"30\":[\"\\n\\n\\nhighlightBlock('115');\\nblockly_js_func_when_dpad_bottom_up();\\nhighlightBlock('187');\\nblockly_js_func_move_stop();\\n\"],\"31\":[\"\\n\\n\\nhighlightBlock('114');\\nblockly_js_func_when_dpad_bottom_down();\\nhighlightBlock('134');\\nblockly_js_func_move_run(@255@,@BACKWARD@);\\n\"],\"40\":[\"\\n\\n\\nhighlightBlock('117');\\nblockly_js_func_when_dpad_left_up();\\nhighlightBlock('200');\\nblockly_js_func_move_stop();\\n\"],\"41\":[\"\\n\\n\\nhighlightBlock('116');\\nblockly_js_func_when_dpad_left_down();\\nhighlightBlock('148');\\nblockly_js_func_move_turn(@255@,@LEFT@);\\n\"]}"
+            }
+        }
+    },
+    "ColorPicker": {
+        "className": "MBWColorPicker",
+        "type": "ColorPicker",
+        "name": "control_widget_led_color",
+        "data": {
+            "mcore": {
+                "port": "7",
+                "slot": "1",
+                "portFilter": "y",
+                "directControlType": "rgbled"
+            },
+            "auriga": {
+                "port": "0",
+                "slot": "1",
+                "portFilter": "y",
+                "directControlType": "rgbled"
+            },
+            "orion": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "y"
+            },
+            "megaPi": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "y"
+            }
+        }
+    },
+    "RadarWarningSwitch": {
+        "className": "MBWSwitch",
+        "iconName": "sensor-icon-radar",
+        "type": "Switch",
+        "name": "control_widget_radar_warning",
+        "data": {
+            "auriga": {
+                "port": "10",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ id=@ZI56IBokcRFNsJJ8Bgzj@ x=@200@ y=@100@><next><block type=@variables_set@ id=@0fCI6ns5DuxoyY5yiS9P@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@2hZUinRmEaqXh8h9wbmx@><field name=@NUM@>0.5</field></block></value><next><block type=@set_auriga_led_color@ id=@1LVpGOT0tss69PsrtwvY@><value name=@LED_POSITION@><block type=@math_number_list@ id=@7jdOPZ3dJA0uiOciTpxO@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR2@><block type=@colour_picker@ id=@lIgfkYIvdfX10npXCWEn@><field name=@COLOUR@>#333333</field></block></value><next><block type=@controls_repeat_forever@ id=@zHfBBgYdTM9QsKEjeInC@><statement name=@DO@><block type=@variables_set@ id=@2S7kNw159gqqAe01tCDk@><field name=@VAR@>distance</field><value name=@VALUE@><block type=@detect_ultrasonic@ id=@oPUh8tNFGrm0fih7XcmO@><field name=@PORT@>PORT-10</field></block></value><next><block type=@variables_set@ id=@NrbIdyXjQn5LMtUDYx8g@><field name=@VAR@>maxDistance</field><value name=@VALUE@><block type=@math_number@ id=@djUVIQXh7Naz9evJ4dvX@><field name=@NUM@>30</field></block></value><next><block type=@controls_if@ id=@kyrpysZDosICeptKCfGM@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ id=@98NcHhN8jHYNemNkyGoV@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@tCzqTlUZEGYKWUMALWRo@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@variables_get@ id=@DW5DJZxEyFOdDs9odA3e@><field name=@VAR@>maxDistance</field></block></value></block></value><statement name=@DO0@><block type=@controls_if@ id=@XGaZFitFfND4jN9nxViP@><value name=@IF0@><block type=@logic_compare@ id=@CNuWWNa1M9kaDtwNHi9t@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@wZD8S6sCdiQOazvLOP61@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@math_number@ id=@hYzFSScBOjNTUQz3wxbn@><field name=@NUM@>25</field></block></value></block></value><statement name=@DO0@><block type=@variables_set@ id=@XE8fgWLLrrlheGz6DmIr@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@5q5XcWvWwYubLBydmNxc@><field name=@NUM@>0.4</field></block></value><next><block type=@variables_set@ id=@DMJxy5AsqJqdLgtbOfgy@><field name=@VAR@>R</field><value name=@VALUE@><block type=@math_number@ id=@sTXdJEw7HDIuhkkf3zjO@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@thjVoiYXvl9x677C9BZ1@><field name=@VAR@>G</field><value name=@VALUE@><block type=@math_number@ id=@IknQcbQ5nAOR78oOIPgq@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@XgUVZN2eKGF4zxyuS0t5@><field name=@VAR@>B</field><value name=@VALUE@><block type=@math_number@ id=@vFtjlqdq99bc6MtCZDoo@><field name=@NUM@>100</field></block></value></block></next></block></next></block></next></block></statement><next><block type=@controls_if@ id=@hiHmflSM9e7ls4rxngvl@><value name=@IF0@><block type=@logic_compare@ id=@b5u80x3lps4cyHLSnOVt@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@ylMbupSiUwOa7bF5Cp5Z@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@math_number@ id=@BCK3UCxzTYu6766x0thX@><field name=@NUM@>13</field></block></value></block></value><statement name=@DO0@><block type=@variables_set@ id=@IfbdBVglfzHFNfVysSDm@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@g0xdKsuY6reEvUMUUiCZ@><field name=@NUM@>0.3</field></block></value><next><block type=@variables_set@ id=@Gc4C7ycTMVJ1k82dOQZp@><field name=@VAR@>R</field><value name=@VALUE@><block type=@math_number@ id=@DP13db3exTUcaGt9wPOg@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@9WGOXCfY8AMvFwtddnuf@><field name=@VAR@>G</field><value name=@VALUE@><block type=@math_number@ id=@9Zd5NNr5RjkkLcaD3taT@><field name=@NUM@>100</field></block></value><next><block type=@variables_set@ id=@6MwJVldhhnp6ib423V9c@><field name=@VAR@>B</field><value name=@VALUE@><block type=@math_number@ id=@S1Fgo9pd3rD2mJFMMa4l@><field name=@NUM@>0</field></block></value></block></next></block></next></block></next></block></statement><next><block type=@controls_if@ id=@u90FfdgdD5gqJnh6ptOq@><value name=@IF0@><block type=@logic_compare@ id=@gZ1FAhe0LzJ9EqIdmDUI@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@E79DvLyMzMRn3p87pT8t@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@math_number@ id=@xjRwIqKqXJ6vbtWaQXTR@><field name=@NUM@>8</field></block></value></block></value><statement name=@DO0@><block type=@variables_set@ id=@S0kIyyJF8vw8bRrg2v4f@><field name=@VAR@>R</field><value name=@VALUE@><block type=@math_number@ id=@nI7BP2bTBmbXGuwMefKU@><field name=@NUM@>100</field></block></value><next><block type=@variables_set@ id=@2nb915up0qQKIuG18aD7@><field name=@VAR@>G</field><value name=@VALUE@><block type=@math_number@ id=@i2Xe2Akem3wHhuieZLZb@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@F1jAgc1XQ0xQDlkHlL4H@><field name=@VAR@>B</field><value name=@VALUE@><block type=@math_number@ id=@GUM2EQPnOTJRDAd9lHSS@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@DKwMBTy6bWgew6QnqyER@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@aC78IdOKkZKBAiDnzc5i@><field name=@NUM@>0.2</field></block></value><next><block type=@play_tone@ id=@sApKM4SDFLaRbWrufJN3@><field name=@TONE@>C5</field></block></next></block></next></block></next></block></next></block></statement><next><block type=@set_auriga_led_color_rgb@ id=@Lj3Wl1k6z0g736s2cCvx@><value name=@LED_POSITION@><block type=@math_number_list@ id=@1biEp94jA0mZJxVlDjvp@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR_R@><block type=@variables_get@ id=@eLsRWN8atYaqzbfG2koP@><field name=@VAR@>R</field></block></value><value name=@COLOUR_G@><block type=@variables_get@ id=@bNDutNFGQT2v0tjXNgUH@><field name=@VAR@>G</field></block></value><value name=@COLOUR_B@><block type=@variables_get@ id=@ivcqCS2H5f6h3pHHcUQm@><field name=@VAR@>B</field></block></value><next><block type=@wait@ id=@wGnBQJpKPc2YEfbzEnRf@><value name=@DELAY@><block type=@variables_get@ id=@JzwoRIiRr3G43RFAkkYi@><field name=@VAR@>timeFlag</field></block></value><next><block type=@stop_auriga_led_color@ id=@U8s0dm98719k9pQUVvQR@><value name=@LED_POSITION@><block type=@math_number_list@ id=@ZpYstOWUdnSEZCGmmb3M@><field name=@NUMBER_LIST@>0</field></block></value></block></next></block></next></block></next></block></next></block></next></block></statement><statement name=@ELSE@><block type=@set_auriga_led_color@ id=@Wsn7tRW9pg4OC5t16HaN@><value name=@LED_POSITION@><block type=@math_number_list@ id=@ekmjJU7iQKzwaCJOFmYG@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR2@><block type=@colour_picker@ id=@omPANVYF5OD8t96xaDHJ@><field name=@COLOUR@>#333333</field></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></next></block><block type=@when_switch_off@ id=@u7gGJLvP74g1JP66Rz7q@ x=@204@ y=@1224@><next><block type=@stop_auriga_led_color@ id=@Mb1FT1sSu3Zla5mqkhkq@><value name=@LED_POSITION@><shadow type=@math_number_list@ id=@wJJHmV4rxLEe3sNTITTT@><field name=@NUMBER_LIST@>0</field></shadow></value></block></next></block></xml>",
+                "code": "{\"0\":[\"var timeFlag, B, G, R, distance, maxDistance;\n\n\nhighlightBlock(##u7gGJLvP74g1JP66Rz7q##);\nblockly_js_func_when_switch_off();\nhighlightBlock(##Mb1FT1sSu3Zla5mqkhkq##);\nblockly_js_func_stop_auriga_led_color(@0@);\n\"],\"1\":[\"var timeFlag, B, G, R, distance, maxDistance;\n\n\nhighlightBlock(##ZI56IBokcRFNsJJ8Bgzj##);\nblockly_js_func_when_switch_on();\nhighlightBlock(##0fCI6ns5DuxoyY5yiS9P##);\ntimeFlag = 0.5;\nhighlightBlock(##1LVpGOT0tss69PsrtwvY##);\nblockly_js_func_set_auriga_led_color(@0@,@###333333##@);\nhighlightBlock(##zHfBBgYdTM9QsKEjeInC##);\nwhile (true) {\n  highlightBlock(##2S7kNw159gqqAe01tCDk##);\n  distance = blockly_js_func_detect_ultrasonic(@PORT-10@);\n  highlightBlock(##NrbIdyXjQn5LMtUDYx8g##);\n  maxDistance = 30;\n  highlightBlock(##kyrpysZDosICeptKCfGM##);\n  if ((distance) < (maxDistance)) {\n    highlightBlock(##XGaZFitFfND4jN9nxViP##);\n    if ((distance) < 25) {\n      highlightBlock(##XE8fgWLLrrlheGz6DmIr##);\n      timeFlag = 0.4;\n      highlightBlock(##DMJxy5AsqJqdLgtbOfgy##);\n      R = 0;\n      highlightBlock(##thjVoiYXvl9x677C9BZ1##);\n      G = 0;\n      highlightBlock(##XgUVZN2eKGF4zxyuS0t5##);\n      B = 100;\n    }\n    highlightBlock(##hiHmflSM9e7ls4rxngvl##);\n    if ((distance) < 13) {\n      highlightBlock(##IfbdBVglfzHFNfVysSDm##);\n      timeFlag = 0.3;\n      highlightBlock(##Gc4C7ycTMVJ1k82dOQZp##);\n      R = 0;\n      highlightBlock(##9WGOXCfY8AMvFwtddnuf##);\n      G = 100;\n      highlightBlock(##6MwJVldhhnp6ib423V9c##);\n      B = 0;\n    }\n    highlightBlock(##u90FfdgdD5gqJnh6ptOq##);\n    if ((distance) < 8) {\n      highlightBlock(##S0kIyyJF8vw8bRrg2v4f##);\n      R = 100;\n      highlightBlock(##2nb915up0qQKIuG18aD7##);\n      G = 0;\n      highlightBlock(##F1jAgc1XQ0xQDlkHlL4H##);\n      B = 0;\n      highlightBlock(##DKwMBTy6bWgew6QnqyER##);\n      timeFlag = 0.2;\n      highlightBlock(##sApKM4SDFLaRbWrufJN3##);\n      blockly_js_func_play_tone(@C5@);\n    }\n    highlightBlock(##Lj3Wl1k6z0g736s2cCvx##);\n    blockly_js_func_set_auriga_led_color_rgb(@0@,(R),(G),(B));\n    highlightBlock(##wGnBQJpKPc2YEfbzEnRf##);\n    wait((timeFlag));\n    highlightBlock(##U8s0dm98719k9pQUVvQR##);\n    blockly_js_func_stop_auriga_led_color(@0@);\n  } else {\n    highlightBlock(##Wsn7tRW9pg4OC5t16HaN##);\n    blockly_js_func_set_auriga_led_color(@0@,@###333333##@);\n  }\n  highlightBlock(##zHfBBgYdTM9QsKEjeInC##);\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "3",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_switch_on@ id=@6gZTMg3KghePLNoa4RfU@ x=@200@ y=@100@><next><block type=@variables_set@ id=@ODUiJSxOcSGZzdGvQ9Yg@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@pXyCdXvHgLspGoCnNUYW@><field name=@NUM@>0.5</field></block></value><next><block type=@set_mbot_led_color@ id=@CTTp3ZgG4iUje9x192a3@><field name=@LED_POSITION@>0</field><value name=@COLOUR_MCORE@><block type=@colour_picker@ id=@pTArtHT3D5VQH4mshmvR@><field name=@COLOUR@>#333333</field></block></value><next><block type=@controls_repeat_forever@ id=@Y4g5MkykqiLPj6ULdlWV@><statement name=@DO@><block type=@variables_set@ id=@cBuwmzdhRywlGIfVgqoM@><field name=@VAR@>distance</field><value name=@VALUE@><block type=@detect_ultrasonic@ id=@0SvnaYmyxaIoQkDP6GQe@><field name=@PORT@>PORT-3</field></block></value><next><block type=@variables_set@ id=@rjcqVx4oCAJEpT3XQ5g8@><field name=@VAR@>maxDistance</field><value name=@VALUE@><block type=@math_number@ id=@WPmzurc87R0U2U9fwRD9@><field name=@NUM@>30</field></block></value><next><block type=@controls_if@ id=@UxvFZ6AvE0ua0HarOjDG@><mutation else=@1@></mutation><value name=@IF0@><block type=@logic_compare@ id=@EO5zn45H37Cu9NB5BnFW@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@xOndk36AXGM4YC0T9TTo@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@variables_get@ id=@2SsW2BayzlRr4JIPcZlB@><field name=@VAR@>maxDistance</field></block></value></block></value><statement name=@DO0@><block type=@controls_if@ id=@WqMJCyPnvJLs0OBbBlfL@><value name=@IF0@><block type=@logic_compare@ id=@VMT3I2ZfkGYzKSu3GQ0p@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@kwZDcNt4XjXqZDOWALrY@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@math_number@ id=@Wr39gUkIea8rJVmx4SwD@><field name=@NUM@>25</field></block></value></block></value><statement name=@DO0@><block type=@variables_set@ id=@YZ6xks6Ogtw2WgEk4dsK@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@vHrdPCTOemoIpzp5fkzS@><field name=@NUM@>0.4</field></block></value><next><block type=@variables_set@ id=@XbSS6SN6tr9LwLwOomn9@><field name=@VAR@>R</field><value name=@VALUE@><block type=@math_number@ id=@uZnl0BV66BBuDhCQEim7@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@q1W61rX6YFmTcecGy1fD@><field name=@VAR@>G</field><value name=@VALUE@><block type=@math_number@ id=@xmTbmvDKVGKTFYTSr9Ox@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@iJNvpa1tVmyUOPAeQw2s@><field name=@VAR@>B</field><value name=@VALUE@><block type=@math_number@ id=@Msy9PU6wFBRJshYiGgbQ@><field name=@NUM@>100</field></block></value></block></next></block></next></block></next></block></statement><next><block type=@controls_if@ id=@4pqivpYbvdSV6HcpVxjF@><value name=@IF0@><block type=@logic_compare@ id=@4AWjWBbFD1JwcTqYfx7u@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@k6zpkXqoCsl9a1nO8qlh@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@math_number@ id=@gqtoRLtqzvdfKZF0vk9B@><field name=@NUM@>13</field></block></value></block></value><statement name=@DO0@><block type=@variables_set@ id=@OVOoGRHegKS0fYUxLwIK@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@nZenRmQKAdQ08NfszNRl@><field name=@NUM@>0.3</field></block></value><next><block type=@variables_set@ id=@HxvHkOOCT3SEA0LaoScU@><field name=@VAR@>R</field><value name=@VALUE@><block type=@math_number@ id=@bXs3vMuMhYlS1Djb0WE4@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@tWeUtR9kqRZMYBb8euRt@><field name=@VAR@>G</field><value name=@VALUE@><block type=@math_number@ id=@mdk0ik3nMtCy7PmzeKH1@><field name=@NUM@>100</field></block></value><next><block type=@variables_set@ id=@PDQ4a8qSatrvJZj4iGAC@><field name=@VAR@>B</field><value name=@VALUE@><block type=@math_number@ id=@0kWjUIx0t0DFI0Sns2sQ@><field name=@NUM@>0</field></block></value></block></next></block></next></block></next></block></statement><next><block type=@controls_if@ id=@0V7B54oaY86VO7rr7nyh@><value name=@IF0@><block type=@logic_compare@ id=@FyktjV6ZsTDNlkGbPrv2@><field name=@OP@>LT</field><value name=@A@><block type=@variables_get@ id=@v6HbRxK7qXeNHuwbvrCK@><field name=@VAR@>distance</field></block></value><value name=@B@><block type=@math_number@ id=@oHotya9mtgFCTxlbUAWK@><field name=@NUM@>8</field></block></value></block></value><statement name=@DO0@><block type=@variables_set@ id=@O4DNBSgjrBkHtEGWVBmp@><field name=@VAR@>R</field><value name=@VALUE@><block type=@math_number@ id=@WtERS7xhBJPeqIN7GNk2@><field name=@NUM@>100</field></block></value><next><block type=@variables_set@ id=@ZkpqvTe6IAYclhkTWt4b@><field name=@VAR@>G</field><value name=@VALUE@><block type=@math_number@ id=@0ck0pK1BEEDujcjxorM0@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@ZV1Q6YbpHGrsNAjweCLk@><field name=@VAR@>B</field><value name=@VALUE@><block type=@math_number@ id=@lsKYuZ3l9Lcw8azsC0yJ@><field name=@NUM@>0</field></block></value><next><block type=@variables_set@ id=@8A0zS1ftNQQWlclBlyj9@><field name=@VAR@>timeFlag</field><value name=@VALUE@><block type=@math_number@ id=@13wrNDufZw623y1iqj5R@><field name=@NUM@>0.2</field></block></value><next><block type=@play_tone@ id=@BlVVQcA7HoCq3dnUVGG3@><field name=@TONE@>C5</field></block></next></block></next></block></next></block></next></block></statement><next><block type=@set_mbot_led_color_rgb@ id=@6oRcktffVN61Z3dvpta1@><field name=@LED_POSITION@>0</field><value name=@COLOUR_R@><block type=@variables_get@ id=@Z6MHXfF9IYFcw8ctceBa@><field name=@VAR@>R</field></block></value><value name=@COLOUR_G@><block type=@variables_get@ id=@T7icMuk1K0CQrAv7Jmpe@><field name=@VAR@>G</field></block></value><value name=@COLOUR_B@><block type=@variables_get@ id=@Gedp8lJh13T0daIJhjjF@><field name=@VAR@>B</field></block></value><next><block type=@wait@ id=@lwqqvXhMKXJUTUzBSwBM@><value name=@DELAY@><shadow type=@math_number@ id=@ayph7rfjSJF4Wq5ydTHX@><field name=@NUM@>1</field></shadow><block type=@variables_get@ id=@KQizQtCQtuSvblzYUEW7@><field name=@VAR@>timeFlag</field></block></value><next><block type=@stop_mbot_led_color@ id=@zxmykbAWJ7nqGCFutjoL@><field name=@LED_POSITION@>0</field></block></next></block></next></block></next></block></next></block></next></block></statement><statement name=@ELSE@><block type=@set_mbot_led_color@ id=@zwGDFTJ9mw7n0nVoSJwP@><field name=@LED_POSITION@>0</field><value name=@COLOUR_MCORE@><block type=@colour_picker@ id=@kWpx6R0o9ACWh5cR7yIl@><field name=@COLOUR@>#333333</field></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></next></block><block type=@when_switch_off@ id=@AlhOd1lG4N0V2U9muPAJ@ x=@201@ y=@1081@><next><block type=@stop_mbot_led_color@ id=@OuINLt2qC1tshvc3POlQ@><field name=@LED_POSITION@>0</field></block></next></block></xml>",
+                "code": "{\"0\":[\"var B, G, R, timeFlag, distance, maxDistance, _E5_8F_98_E9_87_8F;\n\n\nhighlightBlock(##AlhOd1lG4N0V2U9muPAJ##);\nblockly_js_func_when_switch_off();\nhighlightBlock(##OuINLt2qC1tshvc3POlQ##);\nblockly_js_func_stop_mbot_led_color(@0@);\n\"],\"1\":[\"var B, G, R, timeFlag, distance, maxDistance, _E5_8F_98_E9_87_8F;\n\n\nhighlightBlock(##6gZTMg3KghePLNoa4RfU##);\nblockly_js_func_when_switch_on();\nhighlightBlock(##ODUiJSxOcSGZzdGvQ9Yg##);\ntimeFlag = 0.5;\nhighlightBlock(##CTTp3ZgG4iUje9x192a3##);\nblockly_js_func_set_mbot_led_color(@0@,@###333333##@);\nhighlightBlock(##Y4g5MkykqiLPj6ULdlWV##);\nwhile (true) {\n  highlightBlock(##cBuwmzdhRywlGIfVgqoM##);\n  distance = blockly_js_func_detect_ultrasonic(@PORT-3@);\n  highlightBlock(##rjcqVx4oCAJEpT3XQ5g8##);\n  maxDistance = 30;\n  highlightBlock(##UxvFZ6AvE0ua0HarOjDG##);\n  if ((distance) < (maxDistance)) {\n    highlightBlock(##WqMJCyPnvJLs0OBbBlfL##);\n    if ((distance) < 25) {\n      highlightBlock(##YZ6xks6Ogtw2WgEk4dsK##);\n      timeFlag = 0.4;\n      highlightBlock(##XbSS6SN6tr9LwLwOomn9##);\n      R = 0;\n      highlightBlock(##q1W61rX6YFmTcecGy1fD##);\n      G = 0;\n      highlightBlock(##iJNvpa1tVmyUOPAeQw2s##);\n      B = 100;\n    }\n    highlightBlock(##4pqivpYbvdSV6HcpVxjF##);\n    if ((distance) < 13) {\n      highlightBlock(##OVOoGRHegKS0fYUxLwIK##);\n      timeFlag = 0.3;\n      highlightBlock(##HxvHkOOCT3SEA0LaoScU##);\n      R = 0;\n      highlightBlock(##tWeUtR9kqRZMYBb8euRt##);\n      G = 100;\n      highlightBlock(##PDQ4a8qSatrvJZj4iGAC##);\n      B = 0;\n    }\n    highlightBlock(##0V7B54oaY86VO7rr7nyh##);\n    if ((distance) < 8) {\n      highlightBlock(##O4DNBSgjrBkHtEGWVBmp##);\n      R = 100;\n      highlightBlock(##ZkpqvTe6IAYclhkTWt4b##);\n      G = 0;\n      highlightBlock(##ZV1Q6YbpHGrsNAjweCLk##);\n      B = 0;\n      highlightBlock(##8A0zS1ftNQQWlclBlyj9##);\n      timeFlag = 0.2;\n      highlightBlock(##BlVVQcA7HoCq3dnUVGG3##);\n      blockly_js_func_play_tone(@C5@);\n    }\n    highlightBlock(##6oRcktffVN61Z3dvpta1##);\n    blockly_js_func_set_mbot_led_color_rgb(@0@,(R),(G),(B));\n    highlightBlock(##lwqqvXhMKXJUTUzBSwBM##);\n    wait((timeFlag));\n    highlightBlock(##zxmykbAWJ7nqGCFutjoL##);\n    blockly_js_func_stop_mbot_led_color(@0@);\n  } else {\n    highlightBlock(##zwGDFTJ9mw7n0nVoSJwP##);\n    blockly_js_func_set_mbot_led_color(@0@,@###333333##@);\n  }\n  highlightBlock(##Y4g5MkykqiLPj6ULdlWV##);\n}\n\"]}"
+            }
+        }
+    },
+    "SegmentSlider": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-digit7",
+        "type": "Slider",
+        "name": "control_widget_seven_segment",
+        "data": {
+            "default": {
+                "port": "6",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@187@ y=@184@><next><block type=@display_serial_display@ data-devicetype=@all@><field name=@PORT@>PORT-6</field><value name=@NUMBER@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('324');\nblockly_js_func_when_slider_changed();\nhighlightBlock('325');\nblockly_js_func_display_serial_display(@PORT-6@,blockly_js_func_detect_get_slider_value(@0@));\n\"]}"
+            },
+            "mcore": {
+                "port": "1",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@187@ y=@184@><next><block type=@display_serial_display@ data-devicetype=@all@><field name=@PORT@>PORT-1</field><value name=@NUMBER@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##316##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##317##);\nblockly_js_func_display_serial_display(@PORT-1@,blockly_js_func_detect_get_slider_value(@0@));\n\"]}"
+            }
+        }
+    },
+    "BuzzButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "sensor-icon-sound",
+        "name": "control_widget_buzz",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ data-widgettype=@Button@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@play_tone@><field name=@TONE@>C5</field></block></next></block><block type=@when_button_pressed_up@ data-widgettype=@Button@ data-blocktype=@when@ x=@200@ y=@260@></block></xml>",
+                "code": "{\"0\":[\"\\n\\n\\nhighlightBlock('165');\\nblockly_js_func_when_button_pressed_up();\\n\"],\"1\":[\"\\n\\n\\nhighlightBlock('164');\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock('197');\\nblockly_js_func_play_tone(@C5@);\\n\"]}"
+            }
+        }
+    },
+    "LedStripMarqueeButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "sensor-icon-strip",
+        "name": "control_widget_marquee",
+        "data": {
+            "default": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ data-widgettype=@Button@ data-blocktype=@when@ x=@211@ y=@170@><next><block type=@controls_for@ data-devicetype=@all@><field name=@VAR@>i</field><value name=@FROM@><block type=@math_number@><field name=@NUM@>1</field></block></value><value name=@TO@><block type=@math_number@><field name=@NUM@>16</field></block></value><value name=@BY@><block type=@math_number@><field name=@NUM@>1</field></block></value><statement name=@DO@><block type=@set_common_led_color@ data-devicetype=@all@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field><value name=@LED_POSITION@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>i</field></block></value><value name=@COLOUR2@><block type=@colour_picker@><field name=@COLOUR@>#ff0000</field></block></value></block></statement><next><block type=@controls_for@ data-devicetype=@all@><field name=@VAR@>j</field><value name=@FROM@><block type=@math_number@><field name=@NUM@>16</field></block></value><value name=@TO@><block type=@math_number@><field name=@NUM@>1</field></block></value><value name=@BY@><block type=@math_number@><field name=@NUM@>-1</field></block></value><statement name=@DO@><block type=@stop_common_led_color@ data-devicetype=@all@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field><value name=@LED_POSITION@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>j</field></block></value></block></statement></block></next></block></next></block></xml>",
+                "code": "{\"1\":[\"var i;\nvar j;\n\n\nhighlightBlock(##57##);\nblockly_js_func_when_button_pressed_down();\nhighlightBlock(##58##);\nfor (i = 1; i <= 16; i++) {\n  highlightBlock(##62##);\n  blockly_js_func_set_common_led_color((i),@PORT-6@,@SLOT-1@,@###ff0000##@);\n  highlightBlock(##58##);\n}\nhighlightBlock(##65##);\nfor (j = 16; j >= 1; j--) {\n  highlightBlock(##69##);\n  blockly_js_func_stop_common_led_color((j),@PORT-6@,@SLOT-1@);\n  highlightBlock(##65##);\n}\n\"]}"
+            }
+        }
+    },
+    "LedStripRandomButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "sensor-icon-strip",
+        "name": "control_widget_random",
+        "data": {
+            "default": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@F2GVFIyT9AJTbv8JzxgW@ x=@229@ y=@141@><next><block type=@set_led_color_rgb@ id=@L0lsWLPyHARtCJqAZbuh@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field><value name=@LED_POSITION@><block type=@math_number_list@ id=@L6AlUKY1S1X89QYNLbhF@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR_R@><block type=@math_random_int@ id=@9jsk5KCfBAqj5MHq5qcp@><value name=@FROM@><block type=@math_number@ id=@s7IO9t2MIl2Ul5JIk2Of@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@H7VxoA8C7eZRMRIdakEx@><field name=@NUM@>120</field></block></value></block></value><value name=@COLOUR_G@><block type=@math_random_int@ id=@nnVoaLLIaDJPwiVVOe8Z@><value name=@FROM@><block type=@math_number@ id=@ZO2NGAGUsC6RFimz5RA4@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@FSfdgTsGDKlqE1aBvIUM@><field name=@NUM@>120</field></block></value></block></value><value name=@COLOUR_B@><block type=@math_random_int@ id=@1FLLjugWhYCK9287WlrS@><value name=@FROM@><block type=@math_number@ id=@4CaaDu6f508qwURy0uE2@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@KBe8tK8eNpvn1Wm5NEOc@><field name=@NUM@>120</field></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"function mathRandomInt(a, b) {\\n  if (a > b) {\\n    // Swap a and b to ensure a is smaller.\\n    var c = a;\\n    a = b;\\n    b = c;\\n  }\\n  return Math.floor(Math.random() * (b - a + 1) + a);\\n}\\n\\n\\nhighlightBlock(##F2GVFIyT9AJTbv8JzxgW##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##L0lsWLPyHARtCJqAZbuh##);\\nblockly_js_func_set_led_color_rgb(@0@,@PORT-6@,@SLOT-1@,mathRandomInt(0, 120),mathRandomInt(0, 120),mathRandomInt(0, 120));\\n\"]}"
+            },
+            "mcore": {
+                "port": "1",
+                "slot": "1",
+                "portFilter": "by",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ data-widgettype=@Button@ data-blocktype=@when@ x=@74@ y=@173@><next><block type=@math_change@ data-devicetype=@all@><field name=@VAR@>red</field><value name=@DELTA@><block type=@math_random_int@ data-devicetype=@all@><value name=@FROM@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@><field name=@NUM@>255</field></block></value></block></value><next><block type=@math_change@ data-devicetype=@all@><field name=@VAR@>green</field><value name=@DELTA@><block type=@math_random_int@ data-devicetype=@all@><value name=@FROM@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@><field name=@NUM@>255</field></block></value></block></value><next><block type=@math_change@ data-devicetype=@all@><field name=@VAR@>blue</field><value name=@DELTA@><block type=@math_random_int@ data-devicetype=@all@><value name=@FROM@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@><field name=@NUM@>255</field></block></value></block></value><next><block type=@set_led_color_rgb@ data-devicetype=@all@><field name=@PORT@>PORT-1</field><field name=@SLOT@>SLOT-1</field><value name=@LED_POSITION@><block type=@math_number_list@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR_R@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>red</field></block></value><value name=@COLOUR_G@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>green</field></block></value><value name=@COLOUR_B@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>blue</field></block></value></block></next></block></next></block></next></block></next></block><block type=@when_button_pressed_up@ data-widgettype=@Button@ data-blocktype=@when@ data-devicetype=@all@ x=@76@ y=@445@><next><block type=@stop_common_led_color@ data-devicetype=@all@><field name=@PORT@>PORT-1</field><field name=@SLOT@>SLOT-1</field><value name=@LED_POSITION@><block type=@math_number_list@><field name=@NUMBER_LIST@>0</field></block></value></block></next></block></xml>",
+                "code": "{\"0\":[\"var red;\nvar green;\nvar blue;\n\n\nhighlightBlock(##32##);\nblockly_js_func_when_button_pressed_up();\nhighlightBlock(##33##);\nblockly_js_func_stop_common_led_color(@0@,@PORT-1@,@SLOT-1@);\n\"],\"1\":[\"var red;\nvar green;\nvar blue;\n\nfunction math_random_int(a, b) {\n  if (a > b) {\n    // Swap a and b to ensure a is smaller.\n    var c = a;\n    a = b;\n    b = c;\n  }\n  return Math.floor(Math.random() * (b - a + 1) + a);\n}\n\n\nhighlightBlock(##14##);\nblockly_js_func_when_button_pressed_down();\nhighlightBlock(##15##);\nred = (typeof red == ##number## ? red : 0) + math_random_int(0, 255);\nhighlightBlock(##19##);\ngreen = (typeof green == ##number## ? green : 0) + math_random_int(0, 255);\nhighlightBlock(##23##);\nblue = (typeof blue == ##number## ? blue : 0) + math_random_int(0, 255);\nhighlightBlock(##27##);\nblockly_js_func_set_led_color_rgb(@0@,@PORT-1@,@SLOT-1@,(red),(green),(blue));\n\"]}"
+            }
+        }
+    },
+    "LedStripLightnessSlider": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-strip",
+        "type": "Slider",
+        "name": "control_widget_lightness",
+        "data": {
+            "default": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@98@ y=@192@><next><block type=@variables_set@ data-devicetype=@all@><field name=@VAR@>item</field><value name=@VALUE@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value><next><block type=@set_led_color_rgb@ data-devicetype=@all@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field><value name=@LED_POSITION@><block type=@math_number_list@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR_R@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@COLOUR_G@><block type=@math_number@><field name=@NUM@>0</field></block></value><value name=@COLOUR_B@><block type=@math_number@><field name=@NUM@>0</field></block></value></block></next></block></next></block></xml>",
+                "code": "{\"1\":[\"var item;\n\n\nhighlightBlock('95');\nblockly_js_func_when_slider_changed();\nhighlightBlock('96');\nitem = blockly_js_func_detect_get_slider_value(@0@) * (255 / 100);\nhighlightBlock('102');\nblockly_js_func_set_led_color_rgb(@0@,@PORT-6@,@SLOT-1@,(item),@0@,@0@);\n\"]}"
+            },
+            "mcore": {
+                "port": "1",
+                "slot": "1",
+                "portFilter": "by",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ data-devicetype=@all@ x=@-17@ y=@358@><next><block type=@variables_set@ data-devicetype=@all@><field name=@VAR@>变量</field><value name=@VALUE@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value></block></value><next><block type=@set_led_color_rgb@ data-devicetype=@all@><field name=@PORT@>PORT-1</field><field name=@SLOT@>SLOT-1</field><value name=@LED_POSITION@><block type=@math_number_list@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR_R@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>变量</field></block></value><value name=@COLOUR_G@><block type=@math_number@><field name=@NUM@>0</field></block></value><value name=@COLOUR_B@><block type=@math_number@><field name=@NUM@>0</field></block></value></block></next></block></next></block></xml>",
+                "code": "{\"1\":[\"var _E5_8F_98_E9_87_8F;\n\n\nhighlightBlock(##35##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##36##);\n_E5_8F_98_E9_87_8F = (blockly_js_func_detect_get_slider_value(@0@) / 100) * 255;\nhighlightBlock(##42##);\nblockly_js_func_set_led_color_rgb(@0@,@PORT-1@,@SLOT-1@,(_E5_8F_98_E9_87_8F),@0@,@0@);\n\"]}"
+            }
+        }
+    },
+    "LedDiscMarqueeButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "sensor-icon-leddisc",
+        "name": "control_widget_marquee",
+        "data": {
+            "auriga": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ data-widgettype=@Button@ data-blocktype=@when@ x=@211@ y=@170@><next><block type=@controls_for@ data-devicetype=@all@><field name=@VAR@>i</field><value name=@FROM@><block type=@math_number@><field name=@NUM@>1</field></block></value><value name=@TO@><block type=@math_number@><field name=@NUM@>12</field></block></value><value name=@BY@><block type=@math_number@><field name=@NUM@>1</field></block></value><statement name=@DO@><block type=@set_auriga_led_color@ data-devicetype=@auriga@><value name=@LED_POSITION@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>i</field></block></value><value name=@COLOUR2@><block type=@colour_picker@><field name=@COLOUR@>#330000</field></block></value></block></statement><next><block type=@controls_for@ data-devicetype=@all@><field name=@VAR@>j</field><value name=@FROM@><block type=@math_number@><field name=@NUM@>1</field></block></value><value name=@TO@><block type=@math_number@><field name=@NUM@>12</field></block></value><value name=@BY@><block type=@math_number@><field name=@NUM@>1</field></block></value><statement name=@DO@><block type=@stop_auriga_led_color@ data-devicetype=@auriga@><value name=@LED_POSITION@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>j</field></block></value></block></statement></block></next></block></next></block></xml>",
+                "code": "{\"1\":[\"var i;\nvar j;\n\n\nhighlightBlock(##29##);\nblockly_js_func_when_button_pressed_down();\nhighlightBlock(##30##);\nfor (i = 1; i <= 12; i++) {\n  highlightBlock(##34##);\n  blockly_js_func_set_auriga_led_color((i),@###330000##@);\n  highlightBlock(##30##);\n}\nhighlightBlock(##37##);\nfor (j = 1; j <= 12; j++) {\n  highlightBlock(##41##);\n  blockly_js_func_stop_auriga_led_color((j));\n  highlightBlock(##37##);\n}\n\"]}"
+            }
+        }
+    },
+    "LedDiscRandomButton": {
+        "className": "MBWIconButton",
+        "type": "Button",
+        "icon": "sensor-icon-leddisc",
+        "name": "control_widget_random",
+        "data": {
+            "auriga": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@pCpfpilDJsYfewJYJ1s0@ x=@231@ y=@139@><next><block type=@set_auriga_led_color_rgb@ id=@nFi3AzeZFqFdWAM4dMQx@><value name=@LED_POSITION@><block type=@math_number_list@ id=@4wwIQ0puBaoJRBxijneM@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR_R@><block type=@math_random_int@ id=@Jn3pq8mknfid6d6AU743@><value name=@FROM@><block type=@math_number@ id=@ibLrxyk1U26NOAmdWEt4@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@6VSXRDCcn2RZXRE3ufhC@><field name=@NUM@>120</field></block></value></block></value><value name=@COLOUR_G@><block type=@math_random_int@ id=@eEG7Qzn8LhrGwyiLF9Ry@><value name=@FROM@><block type=@math_number@ id=@ur5XB6z0gr2qgnyiosoZ@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@MLdOBrnx2cieIzx3G1RT@><field name=@NUM@>120</field></block></value></block></value><value name=@COLOUR_B@><block type=@math_random_int@ id=@DRNAD1ssbEp0NlJAPKf9@><value name=@FROM@><block type=@math_number@ id=@uDIWMAkBMaBho4EaybRN@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@7PkfTerJFE3S1LCHFj7z@><field name=@NUM@>120</field></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"function mathRandomInt(a, b) {\\n  if (a > b) {\\n    // Swap a and b to ensure a is smaller.\\n    var c = a;\\n    a = b;\\n    b = c;\\n  }\\n  return Math.floor(Math.random() * (b - a + 1) + a);\\n}\\n\\n\\nhighlightBlock(##pCpfpilDJsYfewJYJ1s0##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##nFi3AzeZFqFdWAM4dMQx##);\\nblockly_js_func_set_auriga_led_color_rgb(@0@,mathRandomInt(0, 120),mathRandomInt(0, 120),mathRandomInt(0, 120));\\n\"]}"
+            },
+            "mcore": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_button_pressed_down@ id=@SJKVMgISO3ZcDmSD7NOw@ x=@211@ y=@170@><next><block type=@set_mbot_led_color_rgb@ id=@c3vAjWrpw49iNticTtkM@><field name=@LED_POSITION@>0</field><value name=@COLOUR_R@><block type=@math_random_int@ id=@TslJdnH9XAOTb5Q6hsuE@><value name=@FROM@><block type=@math_number@ id=@6MEqdGZ7qIpuF0RqY7Yn@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@canAPHugxLKiSKE2ZqSy@><field name=@NUM@>120</field></block></value></block></value><value name=@COLOUR_G@><block type=@math_random_int@ id=@ssfgUVyMzyYTDPotcIcW@><value name=@FROM@><block type=@math_number@ id=@V6bbiYhnzCk5aAmv2XAn@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@YG8vSlwaf4hBjvGpb4Xb@><field name=@NUM@>120</field></block></value></block></value><value name=@COLOUR_B@><block type=@math_random_int@ id=@r4Q2cOqG8QKpyDoWT4dv@><value name=@FROM@><block type=@math_number@ id=@QZrelMoWOntbw5U8NFCe@><field name=@NUM@>0</field></block></value><value name=@TO@><block type=@math_number@ id=@eUorYPYgcoCsGN2jxnob@><field name=@NUM@>120</field></block></value></block></value></block></next></block></xml>",
+                "code": "{\"1\":[\"function mathRandomInt(a, b) {\\n  if (a > b) {\\n    // Swap a and b to ensure a is smaller.\\n    var c = a;\\n    a = b;\\n    b = c;\\n  }\\n  return Math.floor(Math.random() * (b - a + 1) + a);\\n}\\n\\n\\nhighlightBlock(##SJKVMgISO3ZcDmSD7NOw##);\\nblockly_js_func_when_button_pressed_down();\\nhighlightBlock(##c3vAjWrpw49iNticTtkM##);\\nblockly_js_func_set_mbot_led_color_rgb(@0@,mathRandomInt(0, 120),mathRandomInt(0, 120),mathRandomInt(0, 120));\\n\"]}"
+            }
+        }
+    },
+    "LedDiscLightnessSlider": {
+        "className": "MBWSlider",
+        "iconName": "sensor-icon-leddisc",
+        "type": "Slider",
+        "name": "control_widget_disc_lightness",
+        "data": {
+            "auriga": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ x=@98@ y=@192@><next><block type=@variables_set@ data-devicetype=@all@><field name=@VAR@>item</field><value name=@VALUE@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value></block></value><next><block type=@set_auriga_led_color_rgb@ data-devicetype=@auriga@><value name=@LED_POSITION@><block type=@math_number_list@><field name=@NUMBER_LIST@>0</field></block></value><value name=@COLOUR_R@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>item</field></block></value><value name=@COLOUR_G@><block type=@math_number@><field name=@NUM@>0</field></block></value><value name=@COLOUR_B@><block type=@math_number@><field name=@NUM@>0</field></block></value></block></next></block></next></block></xml>",
+                "code": "{\"1\":[\"var item;\n\n\nhighlightBlock('170');\nblockly_js_func_when_slider_changed();\nhighlightBlock('171');\nitem = blockly_js_func_detect_get_slider_value(@0@) * (255 / 100);\nhighlightBlock('237');\nblockly_js_func_set_auriga_led_color_rgb(@0@,(item),@0@,@0@);\n\"]}"
+            },
+            "mcore": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_slider_changed@ data-widgettype=@Slider@ data-blocktype=@when@ data-devicetype=@all@ x=@190@ y=@164@><next><block type=@math_change@ data-devicetype=@all@><field name=@VAR@>变量</field><value name=@DELTA@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>MULTIPLY</field><value name=@A@><block type=@math_arithmetic@ data-devicetype=@all@><field name=@OP@>DIVIDE</field><value name=@A@><block type=@detect_get_slider_value@ data-devicetype=@all@><field name=@SLIDER@>0</field></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>100</field></block></value></block></value><value name=@B@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>255</field></block></value></block></value><next><block type=@set_mbot_led_color_rgb@ data-devicetype=@mcore-default@><field name=@LED_POSITION@>0</field><value name=@COLOUR_R@><block type=@variables_get@ data-devicetype=@all@><field name=@VAR@>变量</field></block></value><value name=@COLOUR_G@><block type=@math_number@><field name=@NUM@>0</field></block></value><value name=@COLOUR_B@><block type=@math_number@><field name=@NUM@>0</field></block></value></block></next></block></next></block></xml>",
+                "code": "{\"1\":[\"var _E5_8F_98_E9_87_8F;\n\n\nhighlightBlock(##415##);\nblockly_js_func_when_slider_changed();\nhighlightBlock(##452##);\n_E5_8F_98_E9_87_8F = (typeof _E5_8F_98_E9_87_8F == ##number## ? _E5_8F_98_E9_87_8F : 0) + (blockly_js_func_detect_get_slider_value(@0@) / 100) * 255;\nhighlightBlock(##438##);\nblockly_js_func_set_mbot_led_color_rgb(@0@,(_E5_8F_98_E9_87_8F),@0@,@0@);\n\"]}"
+            }
+        }
+    },
+    "PotentiometerNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "type": "Display",
+        "name": "control_widget_potentiometer",
+        "icon": "sensor-icon-potentialmeter",
+        "data": {
+            "default": {
+                "port": "6",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@207@ y=@183@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_potentiometer@ data-devicetype=@all@><field name=@PORT@>PORT-6</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('33');\nblockly_js_func_when_start();\nhighlightBlock('34');\nwhile (true) {\n  highlightBlock('35');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_potentiometer(@PORT-6@),@0@);\n  highlightBlock('34');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "4",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@207@ y=@183@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_potentiometer@ data-devicetype=@all@><field name=@PORT@>PORT-4</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('33');\nblockly_js_func_when_start();\nhighlightBlock('34');\nwhile (true) {\n  highlightBlock('35');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_potentiometer(@PORT-4@),@0@);\n  highlightBlock('34');\n}\n\"]}"
+            }
+        }
+    },
+    "JoystickYValueNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "type": "Display",
+        "name": "control_widget_joystick_y_value",
+        "icon": "sensor-icon-joysticky",
+        "data": {
+            "default": {
+                "port": "6",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@202@ y=@124@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_joystick@ data-devicetype=@all@><field name=@AXIS@>02</field><field name=@PORT@>PORT-6</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('29');\nblockly_js_func_when_start();\nhighlightBlock('30');\nwhile (true) {\n  highlightBlock('31');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_joystick(@PORT-6@,@02@),@0@);\n  highlightBlock('30');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "4",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@202@ y=@124@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_joystick@ data-devicetype=@all@><field name=@AXIS@>02</field><field name=@PORT@>PORT-4</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('29');\nblockly_js_func_when_start();\nhighlightBlock('30');\nwhile (true) {\n  highlightBlock('31');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_joystick(@PORT-4@,@02@),@0@);\n  highlightBlock('30');\n}\n\"]}"
+            }
+        }
+    },
+    "JoystickXValueNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "type": "Display",
+        "name": "control_widget_joystick_x_value",
+        "icon": "sensor-icon-joystickx",
+        "data": {
+            "default": {
+                "port": "6",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_joystick@ data-devicetype=@all@><field name=@AXIS@>01</field><field name=@PORT@>PORT-6</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('25');\nblockly_js_func_when_start();\nhighlightBlock('26');\nwhile (true) {\n  highlightBlock('27');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_joystick(@PORT-6@,@01@),@0@);\n  highlightBlock('26');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "4",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_joystick@ data-devicetype=@all@><field name=@AXIS@>01</field><field name=@PORT@>PORT-4</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('25');\nblockly_js_func_when_start();\nhighlightBlock('26');\nwhile (true) {\n  highlightBlock('27');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_joystick(@PORT-4@,@01@),@0@);\n  highlightBlock('26');\n}\n\"]}"
+            }
+        }
+    },
+    "LimitSwitchStateIndicator": {
+        "className": "MBWIndicator",
+        "type": "Display",
+        "name": "control_widget_limit_switch_state",
+        "data": {
+            "mcore": {
+                "port": "4",
+                "slot": "1",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ id=@Fr74b0MPKXrmuGnXIQgX@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@ id=@hQOZ5T1FEkzeW5e7yTZD@><statement name=@DO@><block type=@display_read_x_on_y@ id=@J6nZCjAmXLX1R9vVZFL9@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_limitSwitch@ id=@pXrWQ40f3RRAeqiKHjHq@><field name=@PORT@>PORT-4</field><field name=@SLOT@>SLOT-1</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##Fr74b0MPKXrmuGnXIQgX##);\nblockly_js_func_when_start();\nhighlightBlock(##hQOZ5T1FEkzeW5e7yTZD##);\nwhile (true) {\n  highlightBlock(##J6nZCjAmXLX1R9vVZFL9##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_limitSwitch(@PORT-4@,@SLOT-1@),@0@);\n  highlightBlock(##hQOZ5T1FEkzeW5e7yTZD##);\n}\n\"]}"
+            },
+            "default": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ id=@fZXV4O6k4RIe3F0zctus@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@ id=@mkx1fdaGsKuLzdwNXwVg@><statement name=@DO@><block type=@display_read_x_on_y@ id=@04YpeE4F84bLjuUHj8SP@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_limitSwitch@ id=@pVLjuPvYjvWYg70xSEla@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##fZXV4O6k4RIe3F0zctus##);\nblockly_js_func_when_start();\nhighlightBlock(##mkx1fdaGsKuLzdwNXwVg##);\nwhile (true) {\n  highlightBlock(##04YpeE4F84bLjuUHj8SP##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_limitSwitch(@PORT-6@,@SLOT-1@),@0@);\n  highlightBlock(##mkx1fdaGsKuLzdwNXwVg##);\n}\n\"]}"
+            }
+        }
+    },
+    "ButtonStateIndicator": {
+        "className": "MBWIndicator",
+        "type": "Display",
+        "name": "control_widget_button_state",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@event_button_changed@ data-devicetype=@all@><field name=@BUTTON@>1</field><field name=@STATE@>1</field></block></value><statement name=@DO0@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>1</field></block></value></block></statement><statement name=@ELSE@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>0</field></block></value></block></statement></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('186');\nblockly_js_func_when_start();\nhighlightBlock('187');\nwhile (true) {\n  highlightBlock('188');\n  if (blockly_js_func_event_button_changed(@1@,@1@)) {\n    highlightBlock('190');\n    blockly_js_func_display_read_x_on_y(@1@,@0@);\n  } else {\n    highlightBlock('192');\n    blockly_js_func_display_read_x_on_y(@0@,@0@);\n  }\n  highlightBlock('187');\n}\n\"]}"
+            }
+        }
+    },
+    "PIRStateIndicator": {
+        "className": "MBWIndicator",
+        "type": "Display",
+        "name": "control_widget_pir_state",
+        "data": {
+            "mcore": {
+                "port": "4",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@130@ y=@147@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@ x=@381@ y=@413@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_pir@ data-devicetype=@all@><field name=@PORT@>PORT-4</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('1');\nblockly_js_func_when_start();\nhighlightBlock('2');\nwhile (true) {\n  highlightBlock('3');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_pir(@PORT-4@),@0@);\n  highlightBlock('2');\n}\n\"]}"
+            },
+            "default": {
+                "port": "6",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@130@ y=@147@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@ x=@381@ y=@413@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_pir@ data-devicetype=@all@><field name=@PORT@>PORT-6</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('1');\nblockly_js_func_when_start();\nhighlightBlock('2');\nwhile (true) {\n  highlightBlock('3');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_pir(@PORT-6@),@0@);\n  highlightBlock('2');\n}\n\"]}"
+            }
+        }
+    },
+    "SwitchStateIndicator": {
+        "className": "MBWIndicator",
+        "type": "Display",
+        "name": "control_widget_switch_state",
+        "data": {
+            "default": {
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@130@ y=@147@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@controls_if@ data-devicetype=@all@><mutation else=@1@></mutation><value name=@IF0@><block type=@event_switch_changed@ data-devicetype=@all@><field name=@SWITCH@>2</field><field name=@STATE@>1</field></block></value><statement name=@DO0@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>1</field></block></value></block></statement><statement name=@ELSE@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@math_number@ data-devicetype=@all@><field name=@NUM@>0</field></block></value></block></statement></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('136');\nblockly_js_func_when_start();\nhighlightBlock('137');\nwhile (true) {\n  highlightBlock('138');\n  if (blockly_js_func_event_switch_changed(@2@,@1@)) {\n    highlightBlock('140');\n    blockly_js_func_display_read_x_on_y(@1@,@0@);\n  } else {\n    highlightBlock('142');\n    blockly_js_func_display_read_x_on_y(@0@,@0@);\n  }\n  highlightBlock('137');\n}\n\"]}"
+            }
+        }
+    },
+    "LinefollowerIndicator": {
+        "className": "MBWDuoIndicator",
+        "type": "Display",
+        "name": "control_widget_linefollower_sensor",
+        "data": {
+            "megaPi": {
+                "port": "8",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@185@ y=@216@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_linefollow@ data-devicetype=@all@><field name=@PORT@>PORT-8</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('147');\nblockly_js_func_when_start();\nhighlightBlock('148');\nwhile (true) {\n  highlightBlock('149');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_linefollow(@PORT-8@),@0@);\n  highlightBlock('148');\n}\n\"]}"
+            },
+            "auriga": {
+                "port": "9",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@185@ y=@216@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_linefollow@ data-devicetype=@all@><field name=@PORT@>PORT-9</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('147');\nblockly_js_func_when_start();\nhighlightBlock('148');\nwhile (true) {\n  highlightBlock('149');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_linefollow(@PORT-9@),@0@);\n  highlightBlock('148');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "2",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@185@ y=@216@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_linefollow@ data-devicetype=@all@><field name=@PORT@>PORT-2</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('147');\nblockly_js_func_when_start();\nhighlightBlock('148');\nwhile (true) {\n  highlightBlock('149');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_linefollow(@PORT-2@),@0@);\n  highlightBlock('148');\n}\n\"]}"
+            },
+            "orion": {
+                "port": "6",
+                "portFilter": "b",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@185@ y=@216@><next><block type=@controls_repeat_forever@ data-devicetype=@all@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_linefollow@ data-devicetype=@all@><field name=@PORT@>PORT-6</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('147');\nblockly_js_func_when_start();\nhighlightBlock('148');\nwhile (true) {\n  highlightBlock('149');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_linefollow(@PORT-6@),@0@);\n  highlightBlock('148');\n}\n\"]}"
+            }
+        }
+    },
+    "SpeedBarDisplay": {
+        "className": "MBWBarDisplay",
+        "type": "Display",
+        "name": "control_widget_speed_bar",
+        "icon": "sensor-icon-motor",
+        "data": {
+            "auriga": {
+                "port": "0",
+                "slot": "1",
+                "portFilter": "re",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@155@ y=@175@><next><block type=@controls_repeat_forever@ data-devicetype=@all@ x=@0@ y=@0@><statement name=@DO@><block type=@display_read_x_on_y@ data-devicetype=@all@ x=@0@ y=@0@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_Value@ data-devicetype=@auriga@><field name=@TYPE@>SPEED</field><field name=@SLOT@>PORT-1</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('31');\nblockly_js_func_when_start();\nhighlightBlock('32');\nwhile (true) {\n  highlightBlock('33');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_enCoderMotorValue(@SPEED@,@PORT-1@),@0@);\n  highlightBlock('32');\n}\n\"]}"
+            }
+        }
+    },
+    "BrightnessNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "iconName": "sensor-icon-light",
+        "type": "Display",
+        "name": "control_widget_brightness",
+        "data": {
+            "auriga": {
+                "port": "11",
+                "portFilter": "k",
+                "directControlType": "lightsensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_lightness@><field name=@PORT@>PORT-11</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('355');\nblockly_js_func_when_start();\nhighlightBlock('356');\nwhile (true) {\n  highlightBlock('357');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_lightness(@PORT-11@),@0@);\n  highlightBlock('356');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "6",
+                "portFilter": "b",
+                "directControlType": "lightsensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_lightness@><field name=@PORT@>PORT-6</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##45##);\nblockly_js_func_when_start();\nhighlightBlock(##46##);\nwhile (true) {\n  highlightBlock(##47##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_lightness(@PORT-6@),@0@);\n  highlightBlock(##46##);\n}\n\"]}"
+            },
+            "default": {
+                "port": "7",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@200@ y=@100@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_lightness@><field name=@PORT@>PORT-7</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('355');\nblockly_js_func_when_start();\nhighlightBlock('356');\nwhile (true) {\n  highlightBlock('357');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_lightness(@PORT-7@),@0@);\n  highlightBlock('356');\n}\n\"]}"
+            }
+        }
+    },
+    "BrightnessLineGraph": {
+        "className": "MBWLineGraph",
+        "iconName": "sensor-icon-light",
+        "type": "Display",
+        "name": "control_widget_brightness",
+        "data": {
+            "auriga": {
+                "port": "11",
+                "portFilter": "k",
+                "directControlType": "lightsensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@182@ y=@212@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_lightness@><field name=@PORT@>PORT-11</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('359');\nblockly_js_func_when_start();\nhighlightBlock('360');\nwhile (true) {\n  highlightBlock('361');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_lightness(@PORT-11@),@0@);\n  highlightBlock('360');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "6",
+                "portFilter": "b",
+                "directControlType": "lightsensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@182@ y=@212@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_lightness@><field name=@PORT@>PORT-6</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##41##);\nblockly_js_func_when_start();\nhighlightBlock(##42##);\nwhile (true) {\n  highlightBlock(##43##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_lightness(@PORT-6@),@0@);\n  highlightBlock(##42##);\n}\n\"]}"
+            },
+            "default": {
+                "port": "7",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@182@ y=@212@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_lightness@><field name=@PORT@>PORT-7</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('359');\nblockly_js_func_when_start();\nhighlightBlock('360');\nwhile (true) {\n  highlightBlock('361');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_lightness(@PORT-7@),@0@);\n  highlightBlock('360');\n}\n\"]}"
+            }
+        }
+    },
+    "LoudnessNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "iconName": "sensor-icon-sound",
+        "type": "Display",
+        "name": "control_widget_loudness",
+        "data": {
+            "auriga": {
+                "port": "14",
+                "portFilter": "k",
+                "directControlType": "soundsensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@174@ y=@198@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_volume@><field name=@PORT@>PORT-14</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('163');\nblockly_js_func_when_start();\nhighlightBlock('164');\nwhile (true) {\n  highlightBlock('165');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_volume(@PORT-14@),@0@);\n  highlightBlock('164');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "4",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@174@ y=@198@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_volume@><field name=@PORT@>PORT-4</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('163');\nblockly_js_func_when_start();\nhighlightBlock('164');\nwhile (true) {\n  highlightBlock('165');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_volume(@PORT-4@),@0@);\n  highlightBlock('164');\n}\n\"]}"
+            },
+            "default": {
+                "port": "8",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@174@ y=@198@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_volume@><field name=@PORT@>PORT-8</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('163');\nblockly_js_func_when_start();\nhighlightBlock('164');\nwhile (true) {\n  highlightBlock('165');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_volume(@PORT-8@),@0@);\n  highlightBlock('164');\n}\n\"]}"
+            }
+        }
+    },
+    "LoudnessLineGraph": {
+        "className": "MBWLineGraph",
+        "iconName": "sensor-icon-sound",
+        "type": "Display",
+        "name": "control_widget_loudness",
+        "data": {
+            "auriga": {
+                "port": "14",
+                "portFilter": "k",
+                "directControlType": "soundsensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@172@ y=@199@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_volume@><field name=@PORT@>PORT-14</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('167');\nblockly_js_func_when_start();\nhighlightBlock('168');\nwhile (true) {\n  highlightBlock('169');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_volume(@PORT-14@),@0@);\n  highlightBlock('168');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "4",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@172@ y=@199@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_volume@><field name=@PORT@>PORT-4</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('167');\nblockly_js_func_when_start();\nhighlightBlock('168');\nwhile (true) {\n  highlightBlock('169');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_volume(@PORT-4@),@0@);\n  highlightBlock('168');\n}\n\"]}"
+            },
+            "default": {
+                "port": "8",
+                "portFilter": "k",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@172@ y=@199@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_volume@><field name=@PORT@>PORT-8</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('167');\nblockly_js_func_when_start();\nhighlightBlock('168');\nwhile (true) {\n  highlightBlock('169');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_volume(@PORT-8@),@0@);\n  highlightBlock('168');\n}\n\"]}"
+            }
+        }
+    },
+    "TemperatureNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "iconName": "sensor-icon-temp",
+        "type": "Display",
+        "name": "control_widget_temperature",
+        "data": {
+            "auriga": {
+                "port": "13",
+                "portFilter": "byke",
+                "directControlType": "temperaturesensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@149@ y=@205@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_temperature@><field name=@PORT@>PORT-13</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('171');\nblockly_js_func_when_start();\nhighlightBlock('172');\nwhile (true) {\n  highlightBlock('173');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_temperature(@PORT-13@),@0@);\n  highlightBlock('172');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "4",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ id=@nIKFOdK4aEWSYBqK64MV@ x=@149@ y=@205@><next><block type=@controls_repeat_forever@ id=@4GMBKU5aa2UPrPtDLUaZ@><statement name=@DO@><block type=@display_read_x_on_y@ id=@3wCbBc4qF48p83RKC5jj@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_common_temperature@ id=@UHq4qx8EaU3wMC2vfDDx@><field name=@PORT@>PORT-4</field><field name=@SLOT@>SLOT-1</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##nIKFOdK4aEWSYBqK64MV##);\nblockly_js_func_when_start();\nhighlightBlock(##4GMBKU5aa2UPrPtDLUaZ##);\nwhile (true) {\n  highlightBlock(##3wCbBc4qF48p83RKC5jj##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_common_temperature(@PORT-4@,@SLOT-1@),@0@);\n  highlightBlock(##4GMBKU5aa2UPrPtDLUaZ##);\n}\n\"]}"
+            },
+            "default": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@149@ y=@205@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_common_temperature@ data-devicetype=@all@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##114##);\nblockly_js_func_when_start();\nhighlightBlock(##115##);\nwhile (true) {\n  highlightBlock(##116##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_common_temperature(@PORT-6@,@SLOT-1@),@0@);\n  highlightBlock(##115##);\n}\n\"]}"
+            }
+        }
+    },
+    "TemperatureLineGraph": {
+        "className": "MBWLineGraph",
+        "iconName": "sensor-icon-temp",
+        "type": "Display",
+        "name": "control_widget_temperature",
+        "data": {
+            "auriga": {
+                "port": "13",
+                "slot": "1",
+                "portFilter": "byke",
+                "directControlType": "temperaturesensor",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@149@ y=@218@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_temperature@><field name=@PORT@>PORT-13</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('175');\nblockly_js_func_when_start();\nhighlightBlock('176');\nwhile (true) {\n  highlightBlock('177');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_temperature(@PORT-13@),@0@);\n  highlightBlock('176');\n}\n\"]}"
+            },
+            "mcore": {
+                "port": "4",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ id=@MsUQ1q6SyJiafyZoO8Tg@ x=@149@ y=@218@><next><block type=@controls_repeat_forever@ id=@XTYYJ50slgswh3EV5YK7@><statement name=@DO@><block type=@display_read_x_on_y@ id=@dGNk9yVihmD2pgWYJOAc@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_common_temperature@ id=@oKM7iJLIPXpHBvZZ4WSp@><field name=@PORT@>PORT-4</field><field name=@SLOT@>SLOT-1</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##MsUQ1q6SyJiafyZoO8Tg##);\nblockly_js_func_when_start();\nhighlightBlock(##XTYYJ50slgswh3EV5YK7##);\nwhile (true) {\n  highlightBlock(##dGNk9yVihmD2pgWYJOAc##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_common_temperature(@PORT-4@,@SLOT-1@),@0@);\n  highlightBlock(##XTYYJ50slgswh3EV5YK7##);\n}\n\"]}"
+            },
+            "default": {
+                "port": "6",
+                "slot": "1",
+                "portFilter": "byk",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@149@ y=@205@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_common_temperature@ data-devicetype=@all@><field name=@PORT@>PORT-6</field><field name=@SLOT@>SLOT-1</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##114##);\nblockly_js_func_when_start();\nhighlightBlock(##115##);\nwhile (true) {\n  highlightBlock(##116##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_common_temperature(@PORT-6@,@SLOT-1@),@0@);\n  highlightBlock(##115##);\n}\n\"]}"
+            }
+        }
+    },
+    "UltrasonicLineGraph": {
+        "className": "MBWLineGraph",
+        "iconName": "sensor-icon-ultrasonic",
+        "type": "Display",
+        "name": "control_widget_ultrasonic",
+        "data": {
+            "auriga": {
+                "port": "10",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@154@ y=@234@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_ultrasonic@><field name=@PORT@>PORT-10</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('9');\nblockly_js_func_when_start();\nhighlightBlock('10');\nwhile (true) {\n  highlightBlock('11');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_ultrasonic(@PORT-10@),@0@);\n  highlightBlock('10');\n}\n\"]}"
+            },
+            "megaPi": {
+                "port": "7",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@154@ y=@234@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_ultrasonic@><field name=@PORT@>PORT-7</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('9');\nblockly_js_func_when_start();\nhighlightBlock('10');\nwhile (true) {\n  highlightBlock('11');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_ultrasonic(@PORT-7@),@0@);\n  highlightBlock('10');\n}\n\"]}"
+            },
+            "default": {
+                "port": "3",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@154@ y=@234@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_ultrasonic@><field name=@PORT@>PORT-3</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##25##);\nblockly_js_func_when_start();\nhighlightBlock(##26##);\nwhile (true) {\n  highlightBlock(##27##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_ultrasonic(@PORT-3@),@0@);\n  highlightBlock(##26##);\n}\n\"]}"
+            }
+        }
+    },
+    "UltrasonicNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "iconName": "sensor-icon-ultrasonic",
+        "type": "Display",
+        "name": "control_widget_ultrasonic",
+        "data": {
+            "auriga": {
+                "port": "10",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@146@ y=@95@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_ultrasonic@><field name=@PORT@>PORT-10</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('5');\nblockly_js_func_when_start();\nhighlightBlock('6');\nwhile (true) {\n  highlightBlock('7');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_ultrasonic(@PORT-10@),@0@);\n  highlightBlock('6');\n}\n\"]}"
+            },
+            "megaPi": {
+                "port": "7",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@146@ y=@95@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_ultrasonic@><field name=@PORT@>PORT-7</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock('5');\nblockly_js_func_when_start();\nhighlightBlock('6');\nwhile (true) {\n  highlightBlock('7');\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_ultrasonic(@PORT-7@),@0@);\n  highlightBlock('6');\n}\n\"]}"
+            },
+            "default": {
+                "port": "3",
+                "portFilter": "y",
+                "xmlData": "<xml xmlns=@http://www.w3.org/1999/xhtml@><block type=@when_start@ data-widgettype=@Display@ data-blocktype=@when@ x=@146@ y=@95@><next><block type=@controls_repeat_forever@><statement name=@DO@><block type=@display_read_x_on_y@><field name=@DISPLAYER@>0</field><value name=@VALUE@><block type=@detect_ultrasonic@><field name=@PORT@>PORT-3</field></block></value></block></statement></block></next></block></xml>",
+                "code": "{\"1\":[\"\n\n\nhighlightBlock(##9##);\nblockly_js_func_when_start();\nhighlightBlock(##10##);\nwhile (true) {\n  highlightBlock(##11##);\n  blockly_js_func_display_read_x_on_y(blockly_js_func_detect_ultrasonic(@PORT-3@),@0@);\n  highlightBlock(##10##);\n}\n\"]}"
+            }
+        }
+    },
+    "CustomJoystick": {
+        "className": "MBWJoystick",
+        "name": "control_widget_joystick",
+        "type": "Joystick"
+    },
+    "CustomButton": {
+        "className": "MBWIconButton",
+        "iconName": "sensor-icon-custom",
+        "name": "control_widget_button",
+        "type": "Button"
+    },
+    "CustomDPad": {
+        "className": "MBWDPad",
+        "name": "control_widget_dpad",
+        "type": "DPad"
+    },
+    "CustomSwitch": {
+        "className": "MBWSwitch",
+        "name": "control_widget_switch",
+        "type": "Switch"
+    },
+    "CustomSlider": {
+        "className": "MBWSlider",
+        "name": "control_widget_slider",
+        "type": "Slider"
+    },
+    "CustomTwoWaySlider": {
+        "className": "MBWTwoWaySlider",
+        "name": "control_widget_slider",
+        "type": "Slider"
+    },
+    "CustomLineGraph": {
+        "className": "MBWLineGraph",
+        "name": "control_widget_linegraph",
+        "type": "Display"
+    },
+    "CustomBarDisplay": {
+        "className": "MBWBarDisplay",
+        "name": "control_widget_bar_display",
+        "type": "Display"
+    },
+    "CustomNumberDisplay": {
+        "className": "MBWNumberDisplay",
+        "name": "control_widget_number_display",
+        "type": "Display"
+    },
+    "CustomIndicator": {
+        "className": "MBWIndicator",
+        "name": "control_widget_indicator",
+        "type": "Display"
+    }
+}

@@ -1,0 +1,54 @@
+{
+  "play": [
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_robotic_arm_tank",
+      "cover": "cover-program-Ultimate2.0 - Robotic Arm Tank.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_camera_dolly",
+      "cover": "cover-program-Ultimate2.0 - Camera Dolly.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_robotic_bartender",
+      "cover": "cover-program-Ultimate2.0 - Robotic Bartender.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_self_balancing_robot",
+      "cover": "cover-program-Ultimate2.0 - Self-Balancing Robot.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_detecting_robot",
+      "cover": "cover-program-Ultimate2.0 - Detecting Robot.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_threed_capture_a",
+      "cover": "cover-program-Ultimate2.0 - 3D Capture A.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_threed_capture_b",
+      "cover": "cover-program-Ultimate2.0 - 3D Capture B.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_rolling_tank",
+      "cover": "cover-program-Ultimate2.0 - Rolling Tank.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_robotic_ant",
+      "cover": "cover-program-Ultimate2.0 - Robotic Ant.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_ultimate_two_catapult_ram",
+      "cover": "cover-program-Ultimate2.0 - Catapult Ram.png"
+    }
+  ]
+}

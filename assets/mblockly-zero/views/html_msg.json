@@ -1,0 +1,156 @@
+{
+    "en_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/en.js",
+        "extend_language_file_path": "../../msg/js/en.js",
+        "block_begin": "Begin",
+        "block_move": "Move",
+        "block_display": "Display",
+        "block_event": "Event",
+        "block_detect": "Detect",
+        "block_math": "Math",
+        "block_control": "Controls"
+    },
+    "hans_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/zh-hans.js",
+        "extend_language_file_path": "../../msg/js/zh-hans.js",
+        "block_begin": "起始",
+        "block_move": "移动",
+        "block_display": "展示",
+        "block_event": "事件",
+        "block_detect": "探测",
+        "block_math": "数学",
+        "block_control": "控制"
+    },
+    "hant_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/zh-hant.js",
+        "extend_language_file_path": "../../msg/js/zh-hant.js",
+        "block_begin": "起始",
+        "block_move": "移動",
+        "block_display": "展示",
+        "block_event": "事件",
+        "block_detect": "探測",
+        "block_math": "數學",
+        "block_control": "控制"
+    },
+    "ja_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/ja.js",
+        "extend_language_file_path": "../../msg/js/ja.js",
+        "block_begin": "開始",
+        "block_move": "動作",
+        "block_display": "表示",
+        "block_event": "イベント",
+        "block_detect": "検知",
+        "block_math": "数学",
+        "block_control": "制御"
+    },
+    "es_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/es.js",
+        "extend_language_file_path": "../../msg/js/es.js",
+        "block_begin": "Empezar",
+        "block_move": "Movimiento",
+        "block_display": "Monitor",
+        "block_event": "Evento",
+        "block_detect": "Detectar",
+        "block_math": "Mates",
+        "block_control": "Controles"
+    },
+    "fr_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/fr.js",
+        "extend_language_file_path": "../../msg/js/fr.js",
+        "block_begin": "Commencer",
+        "block_move": "Bouge toi",
+        "block_display": "Afficher",
+        "block_event": "Événement",
+        "block_detect": "Détecter",
+        "block_math": "Math",
+        "block_control": "Contrôles"
+    },
+    "hr_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/en.js",
+        "extend_language_file_path": "../../msg/js/hr.js",
+        "block_begin": "Početi",
+        "block_move": "Potez",
+        "block_display": "Prikaz",
+        "block_event": "Događaj",
+        "block_detect": "Otkriti",
+        "block_math": "Matematika",
+        "block_control": "Kontrole"
+    },
+    "de_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/de.js",
+        "extend_language_file_path": "../../msg/js/de.js",
+        "block_begin": "Start",
+        "block_move": "Bewegung",
+        "block_display": "Anzeige",
+        "block_event": "Event",
+        "block_detect": "Erkennen",
+        "block_math": "Mathe",
+        "block_control": "Steuerung"
+    },
+    "ru_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/ru.js",
+        "extend_language_file_path": "../../msg/js/ru.js",
+        "block_begin": "Запуск",
+        "block_move": "Движение",
+        "block_display": "Визуальные",
+        "block_event": "Событие",
+        "block_detect": "Обнаружение",
+        "block_math": "Математические",
+        "block_control": "Управление"
+    },
+    "ko_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/ko.js",
+        "extend_language_file_path": "../../msg/js/ko.js",
+        "block_begin": "시작하다",
+        "block_move": "움직임",
+        "block_display": "디스플레이",
+        "block_event": "행사",
+        "block_detect": "탐지",
+        "block_math": "수학",
+        "block_control": "통제 수단"
+    },
+    "it_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/it.js",
+        "extend_language_file_path": "../../msg/js/it.js",
+        "block_begin": "Inizio",
+        "block_move": "Mossa",
+        "block_display": "Display",
+        "block_event": "Evento",
+        "block_detect": "Individuare",
+        "block_math": "Matematica",
+        "block_control": "Controlli"
+    },
+    "pl_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/pl.js",
+        "extend_language_file_path": "../../msg/js/pl.js",
+        "block_begin": "Zacznij",
+        "block_move": "Ruch",
+        "block_display": "Sygnalizuj",
+        "block_event": "Sprawdź",
+        "block_detect": "Wykryj",
+        "block_math": "Oblicz",
+        "block_control": "Kontrola"
+    },
+    "ro_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/ro.js",
+        "extend_language_file_path": "../../msg/js/ro.js",
+        "block_begin": "Pornire",
+        "block_move": "Mișcare",
+        "block_display": "Display",
+        "block_event": "Eveniment",
+        "block_detect": "Detectare",
+        "block_math": "Matematice",
+        "block_control": "Control"
+    },
+    "et_html_data": {
+        "origin_language_file_path": "../../vendors/blockly/msg/js/et.js",
+        "extend_language_file_path": "../../msg/js/et.js",
+        "block_begin": "Alusta",
+        "block_move": "Liigu",
+        "block_display": "Kuva",
+        "block_event": "Sündmus",
+        "block_detect": "Tuvasta",
+        "block_math": "Rehkendamine",
+        "block_control": "Juhtsätidmed"
+    }
+}

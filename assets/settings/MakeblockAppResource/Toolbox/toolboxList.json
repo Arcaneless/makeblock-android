@@ -1,0 +1,342 @@
+{
+    "mcore": [
+              {
+              "groupName": "control_group_move",
+              "iconName": "toolbox-move-icon",
+              "widgetsList": [
+                              "Joystick",
+                              "DPad",
+                              "Speaker",
+                              "SprintButton",
+                              "ShakeSwitch",
+                              "GravitySwitch",
+                              "MBWPathController",
+                              "ObstacleAvoidingSwitch",
+                              "DCMotorSlider1",
+                              "DCMotorSlider2"
+                              ]
+              },
+              {
+              "groupName": "control_group_display",
+              "iconName": "toolbox-light-icon",
+              "widgetsList": [
+                              "BuzzButton",
+                              "MusicKey",
+                              "LedDiscLightnessSlider",
+                              "LedDiscRandomButton",
+                              "ColorPicker",
+                              "RadarWarningSwitch"
+                              ]
+              },
+              {
+              "groupName": "control_group_sense",
+              "iconName": "toolbox-around-icon",
+              "widgetsList": [
+                              "UltrasonicNumberDisplay",
+                              "UltrasonicLineGraph",
+                              "BrightnessNumberDisplay",
+                              "BrightnessLineGraph",
+                              "LinefollowerIndicator"
+                              ]
+              },
+              {
+              "groupName": "control_group_custom",
+              "iconName": "toolbox-custom-icon",
+              "widgetsList": [
+                              "CustomDPad",
+                              "CustomButton",
+                              "CustomSwitch",
+                              "CustomSlider",
+                              "CustomNumberDisplay",
+                              "CustomLineGraph",
+                              "CustomBarDisplay",
+                              "CustomIndicator",
+                              "CustomTwoWaySlider"
+                              ]
+              }
+              ],
+    "orion": [
+              {
+              "groupName": "control_group_move",
+              "iconName": "toolbox-move-icon",
+              "widgetsList": [
+                              "Joystick",
+                              "DPad",
+                              "Speaker",
+                              "SprintButton",
+                              "ShakeSwitch",
+                              "GravitySwitch",
+                              "ObstacleAvoidingSwitch",
+                              "DCMotorSlider1",
+                              "DCMotorSlider2",
+                              "DCMotorSlider3",
+                              "DCMotorSlider4"
+                              ]
+              },
+              {
+              "groupName": "control_group_display",
+              "iconName": "toolbox-light-icon",
+              "widgetsList": [
+                              "LedStripLightnessSlider",
+                              "LedStripRandomButton",
+                              "ColorPicker",
+                              "LedStripMarqueeButton"
+                              ]
+              },
+              {
+              "groupName": "control_group_sense",
+              "iconName": "toolbox-around-icon",
+              "widgetsList": [
+                              "UltrasonicNumberDisplay",
+                              "UltrasonicLineGraph"
+                              ]
+              },
+              {
+              "groupName": "control_group_custom",
+              "iconName": "toolbox-custom-icon",
+              "widgetsList": [
+                              "CustomDPad",
+                              "CustomButton",
+                              "CustomSwitch",
+                              "CustomSlider",
+                              "CustomNumberDisplay",
+                              "CustomLineGraph",
+                              "CustomBarDisplay",
+                              "CustomIndicator",
+                              "CustomTwoWaySlider"
+                              ]
+              }
+              ],
+    "auriga": [
+               {
+               "groupName": "control_group_move",
+               "iconName": "toolbox-move-icon",
+               "widgetsList": [
+                               "Joystick",
+                               "DPad",
+                               "Speaker",
+                               "SprintButton",
+                               "ShakeSwitch",
+                               "GravitySwitch",
+                               "MBWPathController",
+                               "ObstacleAvoidingSwitch",
+                               "LineFollowingSwitch",
+                               "EncoderMotorSlider1",
+                               "EncoderMotorSlider2"
+                               ]
+               },
+               {
+               "groupName": "control_group_display",
+               "iconName": "toolbox-light-icon",
+               "widgetsList": [
+                               "BuzzButton",
+                               "LedDiscLightnessSlider",
+                               "LedDiscRandomButton",
+                               "ColorPicker",
+                               "LedDiscMarqueeButton",
+                               "RadarWarningSwitch"
+                               ]
+               },
+               {
+               "groupName": "control_group_sense",
+               "iconName": "toolbox-around-icon",
+               "widgetsList": [
+                               "UltrasonicNumberDisplay",
+                               "UltrasonicLineGraph",
+                               "BrightnessNumberDisplay",
+                               "BrightnessLineGraph",
+                               "LoudnessNumberDisplay",
+                               "LoudnessLineGraph",
+                               "TemperatureNumberDisplay",
+                               "TemperatureLineGraph",
+                               "LinefollowerIndicator"
+                               ]
+               },
+               {
+               "groupName": "control_group_custom",
+               "iconName": "toolbox-custom-icon",
+               "widgetsList": [
+                               "CustomDPad",
+                               "CustomButton",
+                               "CustomSwitch",
+                               "CustomSlider",
+                               "CustomNumberDisplay",
+                               "CustomLineGraph",
+                               "CustomBarDisplay",
+                               "CustomIndicator",
+                               "CustomTwoWaySlider"
+                               ]
+               }
+               ],
+    "megaPi": [
+               {
+               "groupName": "control_group_move",
+               "iconName": "toolbox-move-icon",
+               "widgetsList": [
+                               "Joystick",
+                               "DPad",
+                               "Speaker",
+                               "SprintButton",
+                               "ShakeSwitch",
+                               "GravitySwitch",
+                               "ObstacleAvoidingSwitch",
+                               "LineFollowingSwitch",
+                               "EncoderMotorSlider1",
+                               "EncoderMotorSlider2",
+                               "EncoderMotorSlider3",
+                               "DCMotorSlider"
+                               ]
+               },
+               {
+               "groupName": "control_group_sense",
+               "iconName": "toolbox-around-icon",
+               "widgetsList": [
+                               "UltrasonicNumberDisplay",
+                               "UltrasonicLineGraph",
+                               "LinefollowerIndicator"
+                               ]
+               },
+               {
+               "groupName": "control_group_custom",
+               "iconName": "toolbox-custom-icon",
+               "widgetsList": [
+                               "CustomDPad",
+                               "CustomButton",
+                               "CustomSwitch",
+                               "CustomSlider",
+                               "CustomNumberDisplay",
+                               "CustomLineGraph",
+                               "CustomBarDisplay",
+                               "CustomIndicator",
+                               "CustomTwoWaySlider"
+                               ]
+               }
+               ],
+    "Default" :[
+                {
+                "groupName": "control_group_custom",
+                "iconName": "toolbox-custom-icon",
+                "widgetsList": [
+                                "CustomDPad",
+                                "CustomButton",
+                                "CustomSwitch",
+                                "CustomSlider",
+                                "CustomNumberDisplay",
+                                "CustomLineGraph",
+                                "CustomBarDisplay",
+                                "CustomIndicator",
+                                "CustomTwoWaySlider"
+                                ]
+                }
+                ],
+    
+    "AirBlockDrone": [
+                      {
+                      "groupName": "control_group_move",
+                      "iconName": "toolbox-move-icon",
+                      "widgetsList": [
+                                      "AirblockFlightJoystick",
+                                      "AirblockAttitudeJoystick",
+                                      "AirblockDronePowerSwitch",
+                                      "AirblockDroneLandButton",
+                                      "AirblockDroneCircleButton",
+                                      "AirblockDroneSMoveButton",
+                                      "AirblockDroneTriangleButton",
+                                      "AirblockDroneRollButton",
+                                      "AirblockDroneShakeButton",
+                                      "AirblockDroneSpiralRiseButton",
+                                      "AirblockDroneEscapeButton"
+                                      ]
+                      },
+                      {
+                      "groupName": "control_group_custom",
+                      "iconName": "toolbox-custom-icon",
+                      "widgetsList": [
+                                      "CustomDPad",
+                                      "CustomButton",
+                                      "CustomSwitch",
+                                      "CustomSlider",
+                                      "CustomNumberDisplay",
+                                      "CustomLineGraph",
+                                      "CustomBarDisplay",
+                                      "CustomIndicator"
+                                      ]
+                      }
+                      ],
+    "AirBlockCar": [
+                    {
+                    "groupName": "control_group_move",
+                    "iconName": "toolbox-move-icon",
+                    "widgetsList": [
+                                    "AirblockCarJoystick",
+                                    "AirblockAttitudeJoystick",
+                                    "AirblockDronePowerSwitch",
+                                    "AirblockCarSMoveButton",
+                                    "AirblockCarDriftButton",
+                                    "AirblockCarSuspendButton"
+                                    ]
+                    },
+                    {
+                    "groupName": "control_group_custom",
+                    "iconName": "toolbox-custom-icon",
+                    "widgetsList": [
+                                    "CustomDPad",
+                                    "CustomButton",
+                                    "CustomSwitch",
+                                    "CustomSlider",
+                                    "CustomNumberDisplay",
+                                    "CustomLineGraph",
+                                    "CustomBarDisplay",
+                                    "CustomIndicator"
+                                    ]
+                    }
+                    ],
+  "AirBlockShip": [
+    {
+      "groupName": "control_group_move",
+      "iconName": "toolbox-move-icon",
+      "widgetsList": [
+        "AirblockCarJoystick",
+        "AirblockVerticalJoystick",
+        "AirblockDronePowerSwitch"
+      ]
+    },
+    {
+      "groupName": "control_group_custom",
+      "iconName": "toolbox-custom-icon",
+      "widgetsList": [
+        "CustomDPad",
+        "CustomButton",
+        "CustomSwitch",
+        "CustomSlider",
+        "CustomNumberDisplay",
+        "CustomLineGraph",
+        "CustomBarDisplay",
+        "CustomIndicator"
+      ]
+    }
+  ],
+  "AirBlockCustom": [
+                       {
+                       "groupName": "control_group_move",
+                       "iconName": "toolbox-move-icon",
+                       "widgetsList": [
+                                       "AirblockDronePowerSwitch",
+                                       "CustomButton",
+                                       "CustomDPad",
+                                       "CustomSwitch",
+                                       "CustomSlider"
+                                       ]
+                       },
+                       {
+                       "groupName": "control_group_sense",
+                       "iconName": "toolbox-around-icon",
+                       "widgetsList": [
+                                       "CustomNumberDisplay",
+                                       "CustomLineGraph",
+                                       "CustomBarDisplay",
+                                       "CustomIndicator"
+                                       ]
+                       }
+                       ]
+}

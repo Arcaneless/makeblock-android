@@ -1,0 +1,24 @@
+{
+  "play": [
+    {
+      "action": "playground_fly_airblock",
+      "title": "cp_title_air_mode",
+      "cover": "cover-playground-Airblock -  AirDrone.png"
+    },
+    {
+      "action": "playground_car_airblock",
+      "title": "cp_title_land_mode",
+      "cover": "cover-playground-Airblock -  AirCar.png"
+    },
+    {
+      "action": "playground_ship_airblock",
+      "title": "cp_title_water_mode",
+      "cover": "cover-playground-Airblock -  AirShip.png"
+    },
+    {
+      "action": "play_controlpannel",
+      "title": "cp_airblock_colour_gyro",
+      "cover": "cover-program-Airblock - ColourGyro.png"
+    }
+  ]
+}
